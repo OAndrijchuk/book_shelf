@@ -1,0 +1,37 @@
+  
+.header-container{
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    padding: 12px 24px;
+    }
+
+
+.navigation{
+    display: flex;
+    align-items: center;
+    gap: 76px;
+}
+.logo-link{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.menu-link{
+    display: flex;
+    align-items: center;
+}
+.shopping-link{
+    display: flex;
+    gap: 4px;
+}
+.sign-up-container {
+    display: flex;
+    gap: 24px;
+}
