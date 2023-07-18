@@ -1,12 +1,18 @@
   
+.is-hidden {
+    display: none;
+}
+
+
 .header-container{
-    background-color: aqua;
+    border: 2px solid black;
+    border-radius: 0 0 25px 25px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 72px;
     padding: 12px 24px;
     }
-
 
 .navigation{
     display: flex;
@@ -34,4 +40,9 @@
 .sign-up-container {
     display: flex;
     gap: 24px;
+}
+
+.user-settings {
+    display: flex;
+    gap: 18px;
 }
