@@ -1,23 +1,57 @@
 import { FetchBook } from './api';
 import {renderTopBooksList} from './best-books-markup'
 const bestBookList = document.querySelector('.best-book-list');
+const getLoaderEl = document.querySelector('.loader-inner');
 const fetchBook = new FetchBook();
 
-async function getTopBooks() {
+let resizeTimeout; 
+
+function clearTopBooksListMarkup() {
+  bestBookList.innerHTML = ''; 
+}
+async function getTopBooks(amount) {
   try {
+    getLoaderEl.style.display = 'flex'
+    clearTopBooksListMarkup(); 
     const res = await fetchBook.fetchElement('/top-books');
-    createTopBooksListMarkup(res);
+    createTopBooksListMarkup(res, amount);
   } catch (error) {
     console.log(error);
+  } finally {
+    getLoaderEl.style.display = 'none'
   }
 }
 
-function createTopBooksListMarkup(topBooksList) {
-  bestBookList.insertAdjacentHTML('beforeend', renderTopBooksList(topBooksList));
+
+function createTopBooksListMarkup(topBooksList, amount) {
+  const markup = renderTopBooksList(topBooksList, amount);
+  bestBookList.insertAdjacentHTML('beforeend', markup);
 }
 
-// Виклик функції
-getTopBooks();
+function updateScreenWidth() {
+  if (resizeTimeout) {
+    clearTimeout(resizeTimeout);
+  }
+  resizeTimeout = setTimeout(() => {
+    const width = window.innerWidth;
+    window.removeEventListener('resize', updateScreenWidth);
+  
+    if (width > 768) {
+      getTopBooks(5);
+    } else if (width >= 480 && width <= 768) {
+      getTopBooks(3);
+    } else if (width <= 480) {
+      getTopBooks(1);
+    }
+    window.addEventListener('resize', updateScreenWidth);
+  }, 300);
+}
+
+updateScreenWidth();
+window.addEventListener('resize', updateScreenWidth);
+
+
+
 
 
 
