@@ -1,11 +1,10 @@
   
 .activ-page{
-    padding: 8px 16px;
     background: $select-el-color;
-    border-radius: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: 700;
     color: $dark-color;
 }
 
@@ -16,10 +15,14 @@
     justify-content: space-between;
     align-items: center;
     height: 72px;
-    padding: 12px 24px;
+    padding: 18px 20px;
     width: 100%;
     }
-
+.nav-container{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 .navigation{
     display: flex;
     align-items: center;
@@ -28,6 +31,7 @@
 .logo {
     width: 109px;
     height: 28px;
+    // margin-right: 40px;
 }
 .logo-link{
     display: flex;
@@ -40,11 +44,24 @@
 .menu{
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 8px;
+    font-weight: 500;
 }
 .menu-link{
     display: flex;
     align-items: center;
+    padding: 8px 16px;
+    text-transform:uppercase;
+    font-size: 14px;
+    font-style: normal;
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+    border-radius: 36px;
+    transition: background-color $anim-tranz-parameters;
+    &:hover,
+    &:focus{
+        background-color: $select-el-color;
+    }
 }
 .shopping-list-icon{
     fill: currentColor;
@@ -60,7 +77,7 @@
 
 .user-settings {
     display: flex;
-    gap: 18px;
+    gap: 24px;
     align-items: center;
 }
 .sign-up-block {
@@ -70,32 +87,34 @@
 
 .header-menu {
     display: none;
-    color: black;
     }
 
-
-// @media screen and (min-width: 428px) {
-
-
-// }
-
 @media screen and (min-width: 768px) {
-        .burger-menu-svg {
-                display: none;
-            }
+    .burger-menu-svg {
+        display: none;
+        }
 
-            .sign-up-block {
-                display: block;
-            }
+    .sign-up-block {
+        display: block;
+    }
 
-            .header-menu {
-                display: block;
-            }
-
-
+    .header-menu {
+        display: block;
+    }
+    .nav-container {
+        gap: 40px;
+    }
+    .header-container {
+        padding: 14px 32px;
+    }
 
 }
 
 @media screen and (min-width: 1440px) {
-
+.header-container {
+    padding: 14px 24px;
+}
+.nav-container {
+    gap: 76px;
+}
 }
