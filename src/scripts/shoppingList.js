@@ -1,13 +1,37 @@
 import { createBookMarkup } from './shoping-list-markup';
+import { FetchBook } from './api';
+import axios from 'axios';
+const ids = ["643282b1e85766588626a080", "643282b2e85766588626a0fc", "643282b1e85766588626a0b2"]
+
+localStorage.setItem('bookList', JSON.stringify(ids))
+
 
 const shoppingListBtn = document.querySelector('.shopping-link');
 const container = document.querySelector('.cont-section');
 
 const onShoppingClick = event => {
-  // event.preventDefault();
+ 
+  const booksInChart = localStorage.getItem('bookList') || null;
+  // console.dir(booksInChart);
 
-  // const booksInChart = localStorage.getItem(bookList) || null;
-  //
+//   for (const bookId of ids) {
+//   const fetchedBook = axios.get(`https://books-backend.p.goit.global/books/${bookId}`)
+//   .then(r=>r.json())
+//   .then((data) => {
+//     console.log(data);
+//     return data
+//   }
+  
+//   )
+//   console.dir(fetchedBook);
+// }
+
+const fetchedBook = axios.get("https://books-backend.p.goit.global/books/643282b1e85766588626a080")
+  .then((data) => {
+    console.log(data);
+    return data
+  })
+  console.dir(fetchedBook);
   // createlist();
   const bookObj = {
     _id: '643282b1e85766588626a080',
@@ -69,7 +93,7 @@ const onShoppingClick = event => {
   };
   // const img = `<img src="./images/books-empty.png" alt="" />`
   // if (booksInChart) {
-  const book = createBookMarkup(bookObj);
+  const book = createBookMarkup(JSON.parse(fetchedBook));
   container.innerHTML = book;
   // } else {
   //   container.innerHTML = img;
