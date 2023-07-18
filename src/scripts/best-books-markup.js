@@ -1,12 +1,3 @@
-const viewportWidth = window.innerWidth;
-let booksPerCategory = 5;
-
-if (viewportWidth < 1440 && viewportWidth >= 768) {
-  booksPerCategory = 3;
-} else if (viewportWidth < 768) {
-  booksPerCategory = 1;
-}
-
 function renderTopBooksItem(topBooksItem) {
   const { list_name, books } = topBooksItem;
 
