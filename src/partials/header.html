@@ -1,6 +1,6 @@
 <header class="header">
   <div class="container header-container">
-    <nav class="navigation">
+    <div class="logo">
       <a class="logo-link link" href="./index.html">
         <svg class="logo-icon" width="24" height="24">
           <use href="./images/sprite.svg#icon-general-logo"></use>
@@ -9,6 +9,9 @@
           <use href="./images/sprite.svg#icon-Bookshelf"></use>
         </svg>
       </a>
+    </div>
+
+    <div class="header-menu is-hidden">
       <ul class="menu list">
         <li class="menu-item">
           <a class="menu-link link" href="./index.html">Home</a>
@@ -22,20 +25,28 @@
           </a>
         </li>
       </ul>
-    </nav>
-    <div class="sign-up-container">
+    </div>
+
+    <div class="mobmenu">
       <div class="theme-switcher">
         <label class="switch">
           <input type="checkbox" />
           <span class="slider round"></span>
         </label>
       </div>
-      <button type="button" class="sign-up-btn">
-        Sign up
-        <svg class="right-arrow-icon" width="20" height="20">
-          <use href="./images/sprite.svg#icon-right_arrow"></use>
-        </svg>
-      </button>
+
+      <svg class="right-arrow-icon" width="20" height="20">
+        <use href="./images/sprite.svg#icon-align-left-black"></use>
+      </svg>
+
+      <div class="sign-up-mobile_menu-container is-hidden">
+        <button type="button" class="sign-up-btn">
+          Sign up
+          <svg class="right-arrow-icon" width="20" height="20">
+            <use href="./images/sprite.svg#icon-right_arrow"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </header>

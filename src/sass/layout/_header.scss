@@ -1,8 +1,14 @@
   
+.is-hidden {
+    display: none;
+}
+
+
 .header-container{
-    background-color: aqua;
+    background-color: rgb(166, 190, 190);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 72px;
     padding: 12px 24px;
     }
@@ -34,4 +40,10 @@
 .sign-up-container {
     display: flex;
     gap: 24px;
+}
+
+.mobmenu {
+    display: flex;
+    gap: 18px;
+
 }
