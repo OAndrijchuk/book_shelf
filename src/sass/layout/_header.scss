@@ -11,6 +11,7 @@
     align-items: center;
     height: 72px;
     padding: 12px 24px;
+    width: 100%;
     }
 
 .navigation{
@@ -51,3 +52,35 @@
     display: flex;
     gap: 18px;
 }
+
+.sign-up-block {
+    display: none;
+}
+
+.header-menu {
+    display: none;
+}
+
+@media screen and (min-width: 428px) {
+
+
+}
+
+@media screen and (min-width: 768px) {
+        .burger-menu-svg {
+                display: none;
+            }
+        
+            .sign-up-block {
+                display: block;
+            }
+        
+            .header-menu {
+                display: block;
+            }
+
+
+
+}
+
+@media screen and (min-width: 1200px) {}

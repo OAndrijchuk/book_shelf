@@ -1,6 +1,10 @@
 /* The switch - the box around the slider */
-.theme-switcher{display: flex;
-align-items: center;}
+.theme-switcher{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 24px;
+}
 
 .switch {
     position: relative;
