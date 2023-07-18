@@ -68,12 +68,17 @@ ol {
   list-style: none;
 }
 
+ a {
+   color: currentColor;
+ }
+ 
 a[class] {
   text-decoration: none;
 }
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  color: currentColor;
 }
 
 img,

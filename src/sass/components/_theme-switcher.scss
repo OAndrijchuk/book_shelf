@@ -1,6 +1,8 @@
 /* The switch - the box around the slider */
-.theme-switcher{display: flex;
-align-items: center;}
+.theme-switcher{
+    display: flex;
+    align-items: center;
+}
 
 .switch {
     position: relative;
@@ -24,9 +26,9 @@ align-items: center;}
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
     -webkit-transition: .4s;
     transition: .4s;
+    background-image: linear-gradient(to bottom, $accent-color, #DCDCDC);
 }
 
 .slider:before {

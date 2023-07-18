@@ -1,17 +1,23 @@
   
-.is-hidden {
-    display: none;
+.activ-page{
+    padding: 8px 16px;
+    background: $select-el-color;
+    border-radius: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $dark-color;
 }
-
 
 .header-container{
     border: 2px solid black;
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 8px 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 72px;
     padding: 12px 24px;
+    width: 100%;
     }
 
 .navigation{
@@ -19,10 +25,17 @@
     align-items: center;
     gap: 76px;
 }
+.logo {
+    width: 109px;
+    height: 28px;
+}
 .logo-link{
     display: flex;
     align-items: center;
     gap: 8px;
+}
+.logo-text{
+    fill: currentColor;
 }
 .menu{
     display: flex;
@@ -32,6 +45,9 @@
 .menu-link{
     display: flex;
     align-items: center;
+}
+.shopping-list-icon{
+    fill: currentColor;
 }
 .shopping-link{
     display: flex;
@@ -45,4 +61,41 @@
 .user-settings {
     display: flex;
     gap: 18px;
+    align-items: center;
+}
+.sign-up-block {
+    display: none;
+}
+
+
+.header-menu {
+    display: none;
+    color: black;
+    }
+
+
+// @media screen and (min-width: 428px) {
+
+
+// }
+
+@media screen and (min-width: 768px) {
+        .burger-menu-svg {
+                display: none;
+            }
+
+            .sign-up-block {
+                display: block;
+            }
+
+            .header-menu {
+                display: block;
+            }
+
+
+
+}
+
+@media screen and (min-width: 1440px) {
+
 }

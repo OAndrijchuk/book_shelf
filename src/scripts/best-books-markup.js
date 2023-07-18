@@ -2,9 +2,9 @@ function renderTopBooksItem(topBooksItem) {
   const { list_name, books } = topBooksItem;
 
   const topBooksCards = books
-    .map(({ title, author, book_image }) => {
+    .map(({ title, author, book_image, _id }) => {
       return ` <li class="overlay card-item">
-       <img loading="lazy" src="${book_image}" alt="" class="book-image" />
+       <a href="#" data-id="${_id}"><img loading="lazy" src="${book_image}" alt="" class="book-image" /></a>
     <p class="hover-text">quick view</p>
       <h4 class="book-subtitle">${title}</h4>
     <p class="book-autor">${author}</p>

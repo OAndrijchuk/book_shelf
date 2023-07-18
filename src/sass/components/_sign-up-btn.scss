@@ -2,9 +2,16 @@
 .sign-up-btn {
     display: flex;
     align-items: center;
+    justify-content: center;
+    background: $btn-color;
+    width: 184px;
+    height: 45px;
+    border-radius: 36px;
+    font-weight: 700;
+    color: white;
 }
 
 .right-arrow-icon {
     align-items: baseline;
-    stroke: #EAC645;
+    stroke: $select-el-color;
 }
