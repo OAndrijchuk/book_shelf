@@ -5,7 +5,7 @@
 
 .header-container{
     border: 2px solid black;
-    border-radius: 0 0 25px 25px;
+    border-radius: 0 0 8px 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,9 +57,12 @@
     display: none;
 }
 
+
 .header-menu {
     display: none;
-}
+    color: black;
+    }
+
 
 @media screen and (min-width: 428px) {
 
