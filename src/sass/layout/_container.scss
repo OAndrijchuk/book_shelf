@@ -22,6 +22,7 @@
   height: 485px;
   width: 335px;
   border-radius: 8px;
+  margin-bottom: 14px;
 }
 .book-subtitle {
   text-transform: uppercase;
@@ -50,7 +51,6 @@
 }
 
 .hover-text {
-  display: none;
   color: $dark-color;
   text-align: center;
   text-transform: uppercase;
@@ -93,6 +93,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .book-info {
+    display: flex;
+    gap: 25px;
+  }
   .book-image {
     height: 316px;
     width: 218px;
