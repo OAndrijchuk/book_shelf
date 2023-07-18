@@ -6,8 +6,8 @@ const container = document.querySelector('.cont-section');
 const onShoppingClick = event => {
   // event.preventDefault();
 
-  // const booksInChart = localStorage.getItem(bookList) || 0;
-  // if (booksInChart) {}
+  // const booksInChart = localStorage.getItem(bookList) || null;
+  //
   // createlist();
   const bookObj = {
     _id: '643282b1e85766588626a080',
@@ -67,10 +67,13 @@ const onShoppingClick = event => {
     ],
     __v: 0,
   };
+  // const img = `<img src="./images/books-empty.png" alt="" />`
+  // if (booksInChart) {
   const book = createBookMarkup(bookObj);
   container.innerHTML = book;
+  // } else {
+  //   container.innerHTML = img;
+  // }
 };
 
 shoppingListBtn.addEventListener('click', onShoppingClick);
-
-// <h2 class="shop-list-title">Shopping<span class="shop-list-title-span">List</span></h2>
