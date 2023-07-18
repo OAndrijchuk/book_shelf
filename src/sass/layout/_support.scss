@@ -1,0 +1,29 @@
+.section-support {
+  color: #FFFFFF;
+  width: 356px;
+  height: 352px;
+  border-radius: 15px;
+  background: radial-gradient(circle, #4F2EE8 100%, #FFFFFF 100%);
+    box-shadow: 0 10px 10px 0 rgba(245, 245, 247, 0.1);
+}
+
+.charity-logos {
+  color: #FFFFFF;
+  display: flex;
+  flex-wrap: wrap;
+  
+  margin: 20px;
+}
+
+a {
+  display: block;
+  margin: 10px;
+  img {
+    max-width: 40px;
+    height: auto;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
