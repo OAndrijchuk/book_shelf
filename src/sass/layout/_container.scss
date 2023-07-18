@@ -1,0 +1,80 @@
+.bestsellers-title {
+    color: $dark-color;
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.19;
+}
+.bestsellers-title-accent {
+    color: $accent-color;
+}
+.book-title {
+    color: $categories-text-color;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.29;
+}
+.book-subtitle {
+    text-transform: uppercase;
+    color: $dark-color;
+    margin-bottom: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.16;
+}
+.book-autor {
+    color: $secondery-text-color;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.17;
+    overflow: hidden;
+}
+
+.overlay {
+    display: none;
+    position: relative;
+    overflow: hidden;
+}
+.hover-text {
+    color: $dark-color;
+    text-align: center;
+    text-transform: uppercase;
+    visibility: hidden;
+    background-color: $select-el-color;
+    border-radius: 0 0 8px 8px;
+    padding: 26px 52px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.29;
+}
+.more-btn {
+    text-transform: uppercase;
+    border: 2px solid $accent-color;
+    border-radius: 40px;
+    margin-left: auto;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.29;
+    display: block;
+}
+.top-btn {
+    width: 54px;
+    height: 54px;
+    background-color: $btn-color;
+    border-color: #4f2ee84d;
+    border-radius: 50%;
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+}
+
+@media screen and (min-width: 768px) {
+.more-btn {
+        margin-top: 20px;
+    }
+}
