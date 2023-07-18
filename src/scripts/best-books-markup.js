@@ -2,12 +2,14 @@ function renderTopBooksItem(topBooksItem) {
   const { list_name, books } = topBooksItem;
 
   const topBooksCards = books
-    .map(({ title, author, book_image }) => {
+    .map(({ title, author, book_image, _id }) => {
       return ` <li class="overlay card-item">
+      <button type="button" data-id=${_id} class="card-btn">
        <div loading="lazy" class="book-image" style="background-image: url(${book_image})"></div>
     <p class="hover-text">quick view</p>
       <h4 class="book-subtitle">${title}</h4>
     <p class="book-autor">${author}</p>
+      </button>
     </li>
   `;
     })
@@ -27,6 +29,6 @@ export function renderTopBooksList(topBooksList, amount) {
       list_name,
       books: books.slice(0, amount)
     }
-  }).slice(0,4) // Убрать если не надо обрезать .slice(0,4)
+  })
   return mappingTopBooksList.map(renderTopBooksItem).join('');
 }

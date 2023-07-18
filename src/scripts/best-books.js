@@ -9,7 +9,6 @@ let resizeTimeout;
 function clearTopBooksListMarkup() {
   bestBookList.innerHTML = ''; 
 }
-console.log(getLoaderEl, '<')
 async function getTopBooks(amount) {
   try {
     getLoaderEl.style.display = 'flex'
