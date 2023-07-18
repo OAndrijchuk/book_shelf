@@ -37,33 +37,24 @@ function onCategoryClick({ target }) {
   }
   const searchQuery = target.textContent;
 
-  const sectionTitle = document.querySelector('.books-section-title');
-  if (sectionTitle) {
-    sectionTitle.remove();
-  }
-
-  container.insertAdjacentHTML(
-    'afterbegin',
-    `<section class="books-section">
-      <h1 class="books-section-title">${searchQuery}</h1>
-    </section>`
-  );
-
   fetchBook
     .fetchElement(`/category?category=${searchQuery}`)
     .then(categories => {
       const categoryRender = categories
         .map(categorie => createCardTpl(categorie))
         .join('');
-      createCardMarkup(categoryRender);
+      createCardMarkup(categoryRender, searchQuery);
     })
     .catch(error => {
       console.warn(error);
     });
 }
 
-function createCardMarkup(listMap) {
-  container.innerHTML = `<ul class="card-list">${listMap}</ul>`;
+function createCardMarkup(listMap, searchQuery) {
+  container.innerHTML = `<div class="container">
+  <h1 class="books-section-title">${searchQuery}</h1>
+  <ul class="card-list">${listMap}</ul>
+  </div>`;
 }
 
 function clearCardMarkup() {
