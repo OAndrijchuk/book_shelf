@@ -1,4 +1,5 @@
 import { FetchBook } from './api';
+
 import { createCardTpl } from './categories-tpl';
 const navList = document.querySelector('.nav-list');
 
