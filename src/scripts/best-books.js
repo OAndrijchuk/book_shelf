@@ -36,11 +36,11 @@ function updateScreenWidth() {
     const width = window.innerWidth;
     window.removeEventListener('resize', updateScreenWidth);
   
-    if (width > 768) {
+    if (width > 996) {
       getTopBooks(5);
-    } else if (width >= 480 && width <= 768) {
+    } else if (width >= 768 && width <= 995) {
       getTopBooks(3);
-    } else if (width <= 480) {
+    } else if (width <= 767) {
       getTopBooks(1);
     }
     window.addEventListener('resize', updateScreenWidth);

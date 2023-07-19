@@ -87,8 +87,9 @@
   line-height: 1.29;
 }
 
-.card-btn {
+.card-wrapper-btn {
   border: none;
+  width: 100%;
 }
 .top-btn {
   width: 54px;
@@ -113,10 +114,10 @@
 
 .loader {
   display: inline-block;
-  width: 48px;
-  height: 48px;
-  border: 5px solid #FFF;
-  border-bottom-color: #FF3D00;
+  width: 50px;
+  height: 50px;
+  border: 8px solid #4f2ee84d;
+  border-bottom-color: $accent-color;
   border-radius: 50%;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
