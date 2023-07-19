@@ -36,42 +36,16 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 180px;
+  text-align: left;
 }
+
 .book-autor {
+  text-align: left;
   color: $secondery-text-color;
   margin-bottom: 8px;
   font-size: 12px;
   font-style: italic;
   line-height: 1.17;
-  overflow: hidden;
-}
-
-.overlay {
-  position: relative;
-  overflow: hidden;
-}
-
-.overlay:hover .hover-text {
-  display: flex;
-}
-
-.hover-text {
-  color: $dark-color;
-  text-align: center;
-  text-transform: uppercase;
-  visibility: hidden;
-  background-color: $select-el-color;
-  border-radius: 0 0 8px 8px;
-  padding: 26px 52px;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.29;
-
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .more-btn {
@@ -90,6 +64,30 @@
 .card-wrapper-btn {
   border: none;
   width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.card-wrapper-btn:hover .hover-text {
+  visibility: visible;
+}
+
+.hover-text {
+  width: 100%;
+  color: $dark-color;
+  text-align: center;
+  text-transform: uppercase;
+  visibility: hidden;
+  background-color: $select-el-color;
+  border-radius: 0 0 8px 8px;
+  padding: 26px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -20%);
 }
 .top-btn {
   width: 54px;
@@ -101,10 +99,6 @@
   position: fixed;
   bottom: 20px;
   right: 30px;
-}
-
-.card-item {
-  width: 20%;
 }
 
 .book-info {
@@ -121,35 +115,24 @@
   border-radius: 50%;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
-  }
+}
 
-  .loader-inner {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    min-height: 480px;
-  }
+.loader-inner {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  min-height: 480px;
+}
 
-  @keyframes rotation {
+@keyframes rotation {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
-@media screen and (max-width: 768px) {
-  .card-item {
-    width: 33.3%;
-  }
-  .book-image {
-    height: 316px;
-  }
-}
-
-
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .card-item {
     width: 100%;
   }
@@ -160,7 +143,35 @@
 }
 
 @media screen and (min-width: 768px) {
+  .card-item {
+    width: calc((100% - 50px) / 3);
+  }
+  .book-image {
+    height: 316px;
+  }
   .more-btn {
     margin-top: 20px;
+  }
+  .hover-text {
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid-wrapper {
+    max-width: 996px;
+  }
+  .card-item {
+    width: calc((100% - 96px) / 5);
+  }
+  .book-image {
+    height: 256px;
+  }
+}
+.dark {
+  .bestsellers-title,
+  .book-subtitle,
+  .more-btn {
+    color: $light-color;
   }
 }

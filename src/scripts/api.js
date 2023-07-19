@@ -17,8 +17,11 @@ export class FetchBook {
     if (params) {
       optionObject.params = params;
     }
-    return axios.get(`${url}`, optionObject).then(({ data }) => {
-      return data;
-    });
+    return axios
+      .get(`${url}`, optionObject)
+      .then(({ data }) => {
+        return data;
+      })
+      .catch(err => console.log(err));
   }
 }

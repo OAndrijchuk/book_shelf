@@ -1,15 +1,15 @@
 export function createCardTpl(card) {
-  const { book_image, title, author, amazon_product_url, _id } = card;
+  const { book_image, title, author, _id } = card;
   return `
-    <li class="card-item">
-      <a class="card-link" href="${amazon_product_url}" target="_blank" data-id="${_id}">
-        <div class="card-header">
-          <img class="card-img" src="${book_image}" alt="${title}" data-id />
+    <li class="cards-item">
+      <div class="cards-link" data-id="${_id}">
+        <div class="cards-header">
+          <img class="cards-img" src="${book_image}" alt="${title}" data-id />
         </div>
-        <div class="card-content">
-          <h2 class="card-title">${title}</h2>
-          <p class="card-author">${author}</p>
+        <div class="cards-content">
+          <h2 class="cards-title">${title}</h2>
+          <p class="cards-author">${author}</p>
         </div>
-      </a>
+      </div>
     </li>`;
 }
