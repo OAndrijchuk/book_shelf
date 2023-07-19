@@ -17,7 +17,13 @@
     height: 72px;
     padding: 18px 20px;
     width: 100%;
+   
     }
+
+.header {
+position: relative;
+}
+
 .nav-container{
     display: flex;
     align-items: center;
@@ -106,7 +112,7 @@
     }
     .header-container {
         padding: 14px 32px;
-    }
+     }
 
 }
 
