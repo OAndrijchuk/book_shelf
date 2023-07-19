@@ -1,14 +1,14 @@
 import { FetchBook } from './api';
 import { renderTopBooksList } from './best-books-markup';
 import { chooseCategory } from './categories-interaction';
-const bestBookList = document.querySelector('.best-book-list');
+const topBooksSection = document.querySelector('.cont-section');
 const getLoaderEl = document.querySelector('.loader-inner');
 const fetchBook = new FetchBook();
 
 let resizeTimeout;
 
 function clearTopBooksListMarkup() {
-  bestBookList.innerHTML = '';
+  topBooksSection.innerHTML = '';
 }
 async function getTopBooks(amount) {
   try {
@@ -25,7 +25,7 @@ async function getTopBooks(amount) {
 
 function createTopBooksListMarkup(topBooksList, amount) {
   const markup = renderTopBooksList(topBooksList, amount);
-  bestBookList.insertAdjacentHTML('beforeend', markup);
+  topBooksSection.insertAdjacentHTML('beforeend', markup);
 }
 
 export function updateScreenWidth() {
