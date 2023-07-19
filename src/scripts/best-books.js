@@ -1,5 +1,6 @@
 import { FetchBook } from './api';
 import { renderTopBooksList } from './best-books-markup';
+import { chooseCategory } from './categories-interaction';
 const bestBookList = document.querySelector('.best-book-list');
 const getLoaderEl = document.querySelector('.loader-inner');
 const fetchBook = new FetchBook();
@@ -35,11 +36,11 @@ export function updateScreenWidth() {
     const width = window.innerWidth;
     window.removeEventListener('resize', updateScreenWidth);
 
-    if (width > 996) {
+    if (width >= 1440) {
       getTopBooks(5);
-    } else if (width >= 768 && width <= 995) {
+    } else if (width >= 768) {
       getTopBooks(3);
-    } else if (width <= 767) {
+    } else {
       getTopBooks(1);
     }
     window.addEventListener('resize', updateScreenWidth);
