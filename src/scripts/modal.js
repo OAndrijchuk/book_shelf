@@ -4,15 +4,11 @@ const modal = document.querySelector('[data-order]');
 const backdrop = document.querySelector('[data-order-backdrop]');
 const icon = document.querySelector('.modal-close-icon');
 
-openModalBtn.forEach(btn => {
-  btn.addEventListener('click', onOpenModalBtnClick);
-});
-
 closeModalBtn.addEventListener('click', onCloseBtnClick);
 backdrop.addEventListener('click', onCloseBtnClick);
 icon.addEventListener('click', onCloseBtnClick);
 
-function onOpenModalBtnClick() {
+export function onOpenModalBtnClick() {
   backdrop.classList.remove('is-hidden');
   document.body.classList.add('modal-open'); // Добавление класса для запрета прокрутки
   window.addEventListener('keydown', onEscBtnPush);
