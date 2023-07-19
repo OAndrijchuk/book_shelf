@@ -1,3 +1,5 @@
+import iconsSL from '../images/sprite.svg'
+
 export function createBookMarkup(object) {
   const {
     _id,
@@ -28,19 +30,20 @@ export function createBookMarkup(object) {
       <h2 class="shopping-list-book-title">${title}</h2>
       <p class="shopping-list-book-category">${list_name}</p>
 
-      <p class="shopping-list-book-description">Description</p>
+      <p class="shopping-list-book-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nesciunt laudantium architecto sequi nam aut sint suscipit quisquam odio molestiae illum harum, beatae cupiditate ipsam officiis libero totam unde earum ullam sed atque! Veniam ea sed ipsam aut ducimus earum?
+</p>
       <p class="shopping-list-book-author">${author}</p>
       
        <div class="shopping-list-book-links">
 
-      <a href="${amazon.url}"><svg class="modal-page-icon" width="50" height="50">
-      <use href="./images/sprite.svg#icon-amazon"></use>
+      <a href="${amazon.url}"><svg width="32" height="11" class="shopping-list-amazon">
+      <use href="${iconsSL}#icon-amazon"></use>
     </svg></a>
-       <a href="${apple_books.url}"><svg id="icon-apple-books-logo" class="shopping-list-apple"></svg></a>
-       <a href="${bookshop.url}"><svg width="21" height="21" class="shopping-list-apple"><use href="./images/sprite.svg#icon-book-shops-logo"></use></svg></a>
+       <a href="${apple_books.url}"><svg width="16" height="16" class="shopping-list-apple"><use href="${iconsSL}#icon-apple-books-logo"></use></svg></a>
+       <a href="${bookshop.url}"><svg width="16" height="16" class="shopping-list-bookshop"><use href="${iconsSL}#icon-book-shops-logo"></use></svg></a>
        </div>
       <button class="shopping-list-book-btn">
-      <img class="shopping-list-book-icon" src="./dump.png" alt=""></button>
+      <svg class="shopping-list-book-btn-icon" width="16" height="16"><use href="${iconsSL}#icon-bag"></use></svg></button>
     </div>
   
     </div>
@@ -55,7 +58,9 @@ export function createBookMarkup(object) {
 //       <a href="${bookshop.url}"></a>
 export function createShopingList(arrayOfBooks) {
   const mappedBooks = arrayOfBooks.join('');
-  const result = `<h2 class="shop-list-title">Shopping<span class="shop-list-title-span">List</span></h2>
-                  <ul class="shopping-list">${mappedBooks}</ul>`;
+  const result = `<div class="container">
+    <h2 class="shop-list-title">Shopping <span class="shop-list-title-span">List</span></h2>
+    <ul class="shopping-list">${mappedBooks}</ul>
+  </div>`
   return result;
 }
