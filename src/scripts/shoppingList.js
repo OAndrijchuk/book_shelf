@@ -1,13 +1,18 @@
-import { createBookMarkup, createEmptyBackground, createShopingList } from './shoping-list-markup';
+import './changeTheam';
+import './mobile-menu';
+import {
+  createBookMarkup,
+  createEmptyBackground,
+  createShopingList,
+} from './shoping-list-markup';
 import { FetchBook } from './api';
-import emptyImage from '../images/empty-cont-img.png'
+import emptyImage from '../images/empty-cont-img.png';
 
 const menuLinks = document.querySelectorAll('.menu-link');
 menuLinks.forEach(el => el.classList.remove('activ-page'));
 menuLinks[1].classList.add('activ-page');
-const deleteBookBtn = document.querySelector('.shopping-list-book-btn')
-const liItem = document.querySelector('.shopping-list-book-item')
-
+const deleteBookBtn = document.querySelector('.shopping-list-book-btn');
+const liItem = document.querySelector('.shopping-list-book-item');
 
 const ids = [
   '643282b1e85766588626a080',
@@ -26,8 +31,6 @@ const bookMarkups = [];
 const onShoppingClick = async event => {
   const booksInChart = JSON.parse(localStorage.getItem('bookList')) || null;
 
-  
-
   for (const book of booksInChart) {
     const bookData = await new FetchBook().fetchElement(book);
     const bookMarkup = createBookMarkup(bookData);
@@ -35,28 +38,25 @@ const onShoppingClick = async event => {
   }
 
   container.innerHTML = createShopingList(bookMarkups);
-  const ulSL = document.querySelector('.shopping-list')
-  ulSL.addEventListener('click', onDeleteClick)
+  const ulSL = document.querySelector('.shopping-list');
+  ulSL.addEventListener('click', onDeleteClick);
 };
-onShoppingClick()
+onShoppingClick();
 // shoppingListBtn.addEventListener('click', onShoppingClick);
 
-export function onDeleteClick (event) {
+export function onDeleteClick(event) {
   const booksInChart = JSON.parse(localStorage.getItem('bookList')) || null;
-  const deletingBookId = event.target.parentNode.parentNode.parentNode.parentNode.dataset.id;
-  const bookIdx = booksInChart.indexOf(deletingBookId)
+  const deletingBookId =
+    event.target.parentNode.parentNode.parentNode.parentNode.dataset.id;
+  const bookIdx = booksInChart.indexOf(deletingBookId);
   console.log(bookIdx);
   if (bookIdx !== -1) {
-    const splicedBookArr = booksInChart.splice(bookIdx, 1)
+    const splicedBookArr = booksInChart.splice(bookIdx, 1);
     console.log(booksInChart);
-    localStorage.setItem('bookList', JSON.stringify(booksInChart))
-    event.target.parentElement.parentElement.parentElement.parentElement.remove()
+    localStorage.setItem('bookList', JSON.stringify(booksInChart));
+    event.target.parentElement.parentElement.parentElement.parentElement.remove();
   }
   if (booksInChart.length === 0) {
-  container.innerHTML = createEmptyBackground()
+    container.innerHTML = createEmptyBackground();
   }
 }
-
-
-
-

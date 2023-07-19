@@ -36,14 +36,20 @@
           <span class="slider round"></span>
         </label>
       </div>
-      <div class="burger-menu">
+      <button type="button" class="burger-menu">
         <svg class="burger-menu-svg" width="28" height="28">
           <use href="./images/sprite.svg#icon-align-left-black"></use>
         </svg>
-        <!-- <svg class="right-arrow-icon" width="28" height="28">
+        <div
+          class="close-menu-icon-cont visually-hidden"
+          width="28"
+          height="28"
+        >
+          <svg class="close-menu-icon" width="14" height="14">
             <use href="./images/sprite.svg#icon-close_Icon"></use>
-          </svg> -->
-      </div>
+          </svg>
+        </div>
+      </button>
       <div class="sign-up-block">
         <button type="button" class="sign-up-btn">
           Sign up
@@ -57,14 +63,14 @@
 </header>
 
 <!-- Mobile menu -->
-<section class="mobile-menu-nav is-hidden">
+<section class="mobile-menu-nav">
   <div class="mob-menu-wrapper">
     <ul class="mob-menu list">
       <li class="mob-menu-item">
-        <a class="link" href="./index.html">Home</a>
+        <a class="mob-menu-link" href="./index.html">Home</a>
       </li>
       <li class="mob-menu-item">
-        <a class="link shopping-link" href="./shoppingList.html"
+        <a class="mob-menu-link shopping-link" href="./shoppingList.html"
           >Shopping list
           <svg class="shopping-list-icon" width="20" height="20">
             <use href="./images/sprite.svg#icon-bag"></use>

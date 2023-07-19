@@ -44,7 +44,7 @@
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-image: linear-gradient(to bottom, $accent-color, #686868);
 }
 
 input:focus+.slider {

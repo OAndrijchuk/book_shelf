@@ -1,27 +1,48 @@
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+.no-scroll{
+    overflow: hidden;
+}
+
 .mobile-menu-nav {
-    // display: flex;
-    // justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-100%);
     padding-top: 183px;
-    height: 90vh;
-    width: 375px;
+    height: 100vh;
+    max-width: 373px;
     background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
     margin: 0 auto;
-    position: relative;
     flex-direction: column;
+    z-index: 1;
+    transition: transform $anim-tranz-parameters;
 }
 
 
 .img {
-background-image: url('../images/mobile.png');
-width: 375px;
-height: 300px;
-position: absolute;
-bottom: 0;
+    background-image: url('../images/mobile.png');
+    width: 375px;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
 }
 
 .mob-menu-wrapper {
- display: flex;
- justify-content: center;
+    width: 373px;
+    display: flex;
+    justify-content: center;
 }
 
 .mob-menu {
@@ -29,4 +50,55 @@ bottom: 0;
     flex-direction: column
 }
 
+.is-open {
+    transform: translate(-50%, 0);
+}
 
+.burger-menu {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+}
+
+.burger-menu:hover{
+    color: $accent-color;
+}
+.close-menu-icon-cont{
+    padding: 7px;
+}
+.close-menu-icon{
+    stroke: currentColor;
+    transition: color $anim-tranz-parameters;
+}
+
+.burger-menu-svg {
+    align-items: baseline;
+    stroke: currentColor;
+    transition: color $anim-tranz-parameters;
+}
+
+.mob-menu-item{
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.29;
+    /* 128.571% */
+    letter-spacing: -0.56px;
+    text-transform: uppercase;
+}
+.mob-menu-link{
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 50px;
+}
+
+
+@media screen and (min-width: 768px) {
+
+    .burger-menu-svg,
+    .close-menu-icon {
+        display: none;
+    }
+}

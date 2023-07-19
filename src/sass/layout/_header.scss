@@ -15,7 +15,10 @@
     align-items: center;
     height: 72px;
     padding: 18px 20px;
-    width: 100%;
+    max-width: 375px;
+    position: relative;
+    z-index: 2;
+    background-color: $light-color;
     }
 
 .nav-container{
@@ -57,10 +60,10 @@
     line-height: 1.29;
     letter-spacing: -0.56px;
     border-radius: 36px;
-    transition: background-color $anim-tranz-parameters;
+    transition: color $anim-tranz-parameters;
     &:hover,
     &:focus{
-        background-color: $select-el-color;
+       color: $accent-color;
     }
 }
 .shopping-list-icon{
@@ -90,8 +93,8 @@
     }
 
 @media screen and (min-width: 768px) {
-    .burger-menu-svg {
-        display: none;
+    .header-container {
+        max-width: 768px;
         }
 
     .sign-up-block {
@@ -113,6 +116,7 @@
 @media screen and (min-width: 1440px) {
 .header-container {
     padding: 14px 24px;
+    max-width: 1440px;
 }
 .nav-container {
     gap: 76px;
