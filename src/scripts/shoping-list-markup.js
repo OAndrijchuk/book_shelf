@@ -1,4 +1,5 @@
 import iconsSL from '../images/sprite.svg'
+import emptyImage from '../images/empty-cont-img.png';
 
 export function createBookMarkup(object) {
   const {
@@ -57,10 +58,27 @@ export function createBookMarkup(object) {
 //       <a href="${apple_books.url}"></a>
 //       <a href="${bookshop.url}"></a>
 export function createShopingList(arrayOfBooks) {
-  const mappedBooks = arrayOfBooks.join('');
-  const result = `<div class="container">
+  let result 
+  if (arrayOfBooks.length === 0) {
+    result = createEmptyBackground()
+  } else {
+    const mappedBooks = arrayOfBooks.join('');
+  result = `
+  <div class="container">
     <h2 class="shop-list-title">Shopping <span class="shop-list-title-span">List</span></h2>
     <ul class="shopping-list">${mappedBooks}</ul>
   </div>`
+  }
   return result;
+}
+
+export function createEmptyBackground () {
+  return  `
+    <div class="container">
+      <h2 class="shop-list-title">Shopping <span class="shop-list-title-span">List</span></h2>
+      <div class="shop-list-empty-container">
+        <p class="shop-list-empty-paragraph">This page is empty, add some books and proceed to order.</p>
+        <img class="shop-list-empty-img" src="${emptyImage}" alt="Books in empty section"/>
+      </div>
+    </div>`
 }

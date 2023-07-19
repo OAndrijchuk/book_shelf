@@ -1,5 +1,6 @@
-import { createBookMarkup, createShopingList } from './shoping-list-markup';
+import { createBookMarkup, createEmptyBackground, createShopingList } from './shoping-list-markup';
 import { FetchBook } from './api';
+import emptyImage from '../images/empty-cont-img.png'
 
 const menuLinks = document.querySelectorAll('.menu-link');
 menuLinks.forEach(el => el.classList.remove('activ-page'));
@@ -21,11 +22,11 @@ localStorage.setItem('bookList', JSON.stringify(ids));
 
 // const shoppingListBtn = document.querySelector('.shopping-link');
 const container = document.querySelector('.cont-section');
-
+const bookMarkups = [];
 const onShoppingClick = async event => {
   const booksInChart = JSON.parse(localStorage.getItem('bookList')) || null;
 
-  const bookMarkups = [];
+  
 
   for (const book of booksInChart) {
     const bookData = await new FetchBook().fetchElement(book);
@@ -49,6 +50,10 @@ export function onDeleteClick (event) {
     const splicedBookArr = booksInChart.splice(bookIdx, 1)
     console.log(booksInChart);
     localStorage.setItem('bookList', JSON.stringify(booksInChart))
+    event.target.parentElement.parentElement.parentElement.parentElement.remove()
+  }
+  if (booksInChart.length === 0) {
+  container.innerHTML = createEmptyBackground()
   }
 }
 
