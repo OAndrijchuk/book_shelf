@@ -1,3 +1,46 @@
+.shop-list-empty-container {
+  margin: 0 auto;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.shop-list-empty-paragraph {
+  margin-top: 120px;
+  color: rgba(0, 0, 0, 0.60);
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.28; /* 128.571% */
+  letter-spacing: -0.28px;
+  max-width: 244px;
+}
+
+.shop-list-empty-img {
+  max-width: 265px;
+  max-height: 198px;
+
+}
+
+.shop-list-title {
+  color: #111;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.18;
+  letter-spacing: -1.92px;
+  margin-bottom: 40px;
+}
+
+.shop-list-title-span {
+  color: #4F2EE8;
+}
+
 .shopping-list {
   list-style: none;
   display: block;
@@ -8,6 +51,7 @@
   border-radius: 16px;
   border: 2px solid rgba(79, 46, 232, 0.4);
   position: relative;
+  margin-bottom: 20px;
 }
 
 .shopping-list-book-img {
@@ -32,6 +76,11 @@
   letter-spacing: -0.64px;
   text-transform: uppercase;
   margin-bottom: 4px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  max-width: 150px;
 }
 
 .shopping-list-book-category {
@@ -43,6 +92,10 @@
   line-height: 1.16; /* 116.667% */
   letter-spacing: 0.36px;
   margin-bottom: 8px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .shopping-list-book-description {
@@ -53,7 +106,6 @@
   font-weight: 400;
   line-height: 1.28; /* 128.571% */
   letter-spacing: -0.56px;
-  margin-bottom: 32px;
   -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -68,6 +120,13 @@
   font-weight: 400;
   line-height: 1.16; /* 116.667% */
   letter-spacing: -0.48px;
+  position: absolute;
+  bottom: 14px;
+  max-width: 100px;
+  -webkit-line-clamp: 1;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .shopping-list-book-links {
@@ -98,16 +157,34 @@
   width: 28px;
   height: 28px;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 14px;
+  right: 14px;
+  background-color: #4F2EE8;
+    border-radius: 50%;
 }
 
-.shopping-list-book-icon {
-  width: 28px;
-  height: 28px;
+.shopping-list-book-btn-icon {
+  fill: white;
 }
 
 @media screen and (min-width: 768px) {
+
+  .shop-list-empty-container {
+    gap: 20px;
+  }
+
+  .shop-list-empty-paragraph {
+    margin-top: 140px;
+    max-width: 349px;
+    font-size: 18px;
+    line-height: 1.33; /* 133.333% */
+  }
+
+  .shop-list-empty-img {
+    max-width: 322px;
+    max-height: 241px;
+  }
+
   .shopping-list-book-item {
     display: flex;
     padding: 30px 24px;
@@ -138,6 +215,7 @@
     letter-spacing: -0.64px;
     text-transform: uppercase;
     margin-bottom: 4px;
+    max-width: none;
   }
 
   .shopping-list-book-category {
@@ -159,7 +237,7 @@
     font-weight: 400;
     line-height: 1.28; /* 128.571% */
     letter-spacing: -0.56px;
-    margin-bottom: 48px;
+   
   }
 
   .shopping-list-book-author {
@@ -170,6 +248,7 @@
     font-weight: 400;
     line-height: 1.16; /* 116.667% */
     letter-spacing: -0.48px;
+    bottom: 28px;
   }
 
   .shopping-list-book-links {
@@ -181,17 +260,34 @@
     gap: 16px;
   }
 
+  .shopping-list-amazon {
+    width: 48px;
+    height: 15px;
+  }
+
+  .shopping-list-apple {
+    width: 28px;
+    height: 27px;
+  }
+
+  .shopping-list-bookshop {
+    width: 32px;
+    height: 30px; 
+  }
+
   .shopping-list-book-btn {
     width: 34px;
     height: 34px;
     position: absolute;
     top: 24px;
     right: 24px;
+  
   }
 
-  .shopping-list-book-icon {
-    width: 34px;
-    height: 34px;
+  .shopping-list-book-btn-icon {
+    fill: white;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -247,7 +343,7 @@
     font-weight: 400;
     line-height: 1.28; /* 128.571% */
     letter-spacing: -0.56px;
-    margin-bottom: 48px;
+    
   }
 
   .shopping-list-book-author {
@@ -258,6 +354,7 @@
     font-weight: 400;
     line-height: 1.16; /* 116.667% */
     letter-spacing: -0.48px;
+    bottom: 28px;
   }
 
   .shopping-list-book-links {
