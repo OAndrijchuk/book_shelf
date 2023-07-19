@@ -30,12 +30,15 @@ function createCategogiesMarkup(listMap) {
 }
 
 function onCategoryClick({ target }) {
-  if (target.nodeName !== 'A' || !target.classList.contains('aside-link')) {
+  if (!target.classList.contains('aside-link')) {
     return;
   }
   const searchQuery = target.textContent;
-  console.log(target);
 
+  chooseCategory(searchQuery);
+}
+
+export function chooseCategory(searchQuery) {
   fetchBook
     .fetchElement(`/category?category=${searchQuery}`)
     .then(categories => {
@@ -50,8 +53,17 @@ function onCategoryClick({ target }) {
 }
 
 function createCardMarkup(listMap, searchQuery) {
+  const wordsArray = searchQuery.split(' ');
+  const lastWord = wordsArray[wordsArray.length - 1];
+
+  const coloredSpan = document.createElement('span');
+  coloredSpan.textContent = lastWord;
+  coloredSpan.style.color = '#4F2EE8';
+
+  const highlightedQuery = searchQuery.replace(lastWord, coloredSpan.outerHTML);
+
   container.innerHTML = `<div class="container">
-  <h1 class="books-section-title">${searchQuery}</h1>
+  <h1 class="books-section-title">${highlightedQuery}</h1>
   <ul class="card-list">${listMap}</ul>
   </div>`;
 }
