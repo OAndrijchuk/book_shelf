@@ -1,4 +1,3 @@
-  
 .activ-page{
     background: $select-el-color;
     display: flex;
@@ -17,8 +16,8 @@
     height: 72px;
     padding: 18px 20px;
     width: 100%;
-    position: relative;
     }
+
 .nav-container{
     display: flex;
     align-items: center;
@@ -81,10 +80,10 @@
     gap: 24px;
     align-items: center;
 }
+
 .sign-up-block {
     display: none;
 }
-
 
 .header-menu {
     display: none;
@@ -107,7 +106,7 @@
     }
     .header-container {
         padding: 14px 32px;
-    }
+     }
 
 }
 
