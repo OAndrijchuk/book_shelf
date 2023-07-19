@@ -1,14 +1,32 @@
 .mobile-menu-nav {
-    display: flex;
-    // z-index: 100;
-    position:absolute;
-    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    padding-top: 183px;
     height: 90vh;
-    background-color: purple;
-
+    width: 375px;
+    background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
+    margin: 0 auto;
+    position: relative;
+    flex-direction: column;
 }
 
 
 .img {
-background-image: url('../../images/mobile.png');
+background-image: url('../images/mobile.png');
+width: 375px;
+height: 300px;
+position: absolute;
+bottom: 0;
 }
+
+.mob-menu-wrapper {
+ display: flex;
+ justify-content: center;
+}
+
+.mob-menu {
+    display: flex;
+    flex-direction: column
+}
+
+
