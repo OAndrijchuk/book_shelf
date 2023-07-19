@@ -38,6 +38,7 @@
   text-overflow: ellipsis;
   text-align: left;
 }
+
 .book-autor {
   text-align: left;
   color: $secondery-text-color;
@@ -84,9 +85,9 @@
   line-height: 1.29;
   z-index: 9;
   position: absolute;
-  bottom: 10%;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%);
+  transform: translate(-50%, -20%);
 }
 .top-btn {
   width: 54px;
@@ -98,10 +99,6 @@
   position: fixed;
   bottom: 20px;
   right: 30px;
-}
-
-.card-item {
-  width: 20%;
 }
 
 .book-info {
@@ -135,17 +132,7 @@
     transform: rotate(360deg);
   }
 }
-
-@media screen and (max-width: 768px) {
-  .card-item {
-    width: 33.3%;
-  }
-  .book-image {
-    height: 316px;
-  }
-}
-
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .card-item {
     width: 100%;
   }
@@ -156,15 +143,35 @@
 }
 
 @media screen and (min-width: 768px) {
+  .card-item {
+    width: calc((100% - 50px) / 3);
+  }
+  .book-image {
+    height: 316px;
+  }
   .more-btn {
     margin-top: 20px;
   }
   .hover-text {
-    bottom: 15%;
+    bottom: 0;
   }
 }
-@media screen and (max-width: 1440px) {
-  .cont-section {
+
+@media screen and (min-width: 1440px) {
+  .grid-wrapper {
     max-width: 996px;
+  }
+  .card-item {
+    width: calc((100% - 96px) / 5);
+  }
+  .book-image {
+    height: 256px;
+  }
+}
+.dark {
+  .bestsellers-title,
+  .book-subtitle,
+  .more-btn {
+    color: $light-color;
   }
 }
