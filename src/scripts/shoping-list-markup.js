@@ -14,10 +14,9 @@ export function createBookMarkup(object) {
       indie_bound,
     ],
   } = object;
-  console.log(amazon.url);
+  // console.log(amazon.url);
   const markupOfBook = ` 
- <h2 class="shop-list-title">Shopping<span class="shop-list-title-span">List</span></h2>  
-      <li data-id="${_id}">
+       <li data-id="${_id}">
       <div class="shopping-list-book-item">
       <img
         class="shopping-list-book-img"
@@ -34,9 +33,11 @@ export function createBookMarkup(object) {
       
        <div class="shopping-list-book-links">
 
-      <a href="${amazon.url}"><svg id="icon-amazon" class="shopping-list-amazon"></svg></a>
+      <a href="${amazon.url}"><svg class="modal-page-icon" width="50" height="50">
+      <use href="./images/sprite.svg#icon-amazon"></use>
+    </svg></a>
        <a href="${apple_books.url}"><svg id="icon-apple-books-logo" class="shopping-list-apple"></svg></a>
-       <a href="${bookshop.url}"><svg width="21" height="21" class="shopping-list-apple"><use href="../images/sprite.svg#icon-book-shops-logo"></use></svg></a>
+       <a href="${bookshop.url}"><svg width="21" height="21" class="shopping-list-apple"><use href="./images/sprite.svg#icon-book-shops-logo"></use></svg></a>
        </div>
       <button class="shopping-list-book-btn">
       <img class="shopping-list-book-icon" src="./dump.png" alt=""></button>
@@ -53,8 +54,8 @@ export function createBookMarkup(object) {
 //       <a href="${apple_books.url}"></a>
 //       <a href="${bookshop.url}"></a>
 export function createShopingList(arrayOfBooks) {
-  const mappedBooks = arrayOfBooks.map(createBookMarkup).join('')
+  const mappedBooks = arrayOfBooks.join('');
   const result = `<h2 class="shop-list-title">Shopping<span class="shop-list-title-span">List</span></h2>
-                  <ul>${mappedBooks}</ul>`
-  return result
+                  <ul class="shopping-list">${mappedBooks}</ul>`;
+  return result;
 }
