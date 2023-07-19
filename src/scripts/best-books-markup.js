@@ -4,11 +4,11 @@ function renderTopBooksItem(topBooksItem) {
   const topBooksCards = books
     .map(({ title, author, book_image, _id }) => {
       return ` <li class="overlay card-item">
-      <button type="button" data-id=${_id} class="card-btn">
-       <div loading="lazy" class="book-image" style="background-image: url(${book_image})"></div>
-    <p class="hover-text">quick view</p>
-      <h4 class="book-subtitle">${title}</h4>
-    <p class="book-autor">${author}</p>
+      <button type="button" data-id=${_id} class="card-wrapper-btn">
+          <div loading="lazy" class="book-image" style="background-image: url(${book_image})"></div>
+          <p class="hover-text">quick view</p>
+          <h4 class="book-subtitle">${title}</h4>
+          <p class="book-autor">${author}</p>
       </button>
     </li>
   `;
