@@ -51,6 +51,7 @@ ol {
 html,
 body {
   overflow-x: hidden;
+  z-index: -1;
 }
 
 html:focus-within {
@@ -68,12 +69,17 @@ ol {
   list-style: none;
 }
 
+ a {
+   color: currentColor;
+ }
+ 
 a[class] {
   text-decoration: none;
 }
 
 a:not([class]) {
   text-decoration-skip-ink: auto;
+  color: currentColor;
 }
 
 img,
