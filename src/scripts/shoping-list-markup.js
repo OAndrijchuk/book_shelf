@@ -7,6 +7,7 @@ export function createBookMarkup(object) {
     book_image,
     list_name,
     title,
+    description,
     author,
     buy_links: [
       amazon,
@@ -31,8 +32,7 @@ export function createBookMarkup(object) {
       <h2 class="shopping-list-book-title">${title}</h2>
       <p class="shopping-list-book-category">${list_name}</p>
 
-      <p class="shopping-list-book-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil nesciunt laudantium architecto sequi nam aut sint suscipit quisquam odio molestiae illum harum, beatae cupiditate ipsam officiis libero totam unde earum ullam sed atque! Veniam ea sed ipsam aut ducimus earum?
-</p>
+      <p class="shopping-list-book-description">${description || 'Description is empty'}</p>
       <p class="shopping-list-book-author">${author}</p>
       
        <div class="shopping-list-book-links">

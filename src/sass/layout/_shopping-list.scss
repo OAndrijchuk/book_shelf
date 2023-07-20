@@ -51,6 +51,10 @@
   border: 2px solid rgba(79, 46, 232, 0.4);
   position: relative;
   margin-bottom: 20px;
+  transition: 100ms ease-in-out;
+}
+.shopping-list-book-item:hover {
+  transform: scale(1.01);
 }
 
 .shopping-list-book-img {
@@ -132,14 +136,19 @@
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 4px;
+  bottom: 14px;
   right: 14px;
-  gap: 1px;
+  gap: 8px;
 }
 
 .shopping-list-amazon {
   width: 32px;
   height: 11px;
+}
+
+.shopping-list-amazon:hover,
+.shopping-list-amazon:focus {
+  
 }
 
 .shopping-list-apple {
@@ -160,6 +169,13 @@
   right: 14px;
   background-color: #4f2ee8;
   border-radius: 50%;
+  
+}
+
+.shopping-list-book-btn:hover,
+.shopping-list-book-btn:focus {
+  outline: 3px rgba(79, 46, 232, 0.30) solid;
+  transition: 60ms
 }
 
 .shopping-list-book-btn-icon {
@@ -371,6 +387,7 @@
     position: absolute;
     top: 24px;
     right: 24px;
+    
   }
 
   .shopping-list-book-icon {

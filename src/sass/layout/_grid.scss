@@ -19,6 +19,7 @@
   }
   .cont-section {
     grid-area: cont-section;
+
   }
 }
 
@@ -41,5 +42,6 @@
   }
   .cont-section {
     grid-area: cont-section;
+    min-width: 996px;
   }
 }
