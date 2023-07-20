@@ -9,7 +9,6 @@ window.addEventListener('scroll', function (event) {
   if (!document.body.classList.contains('modal-open')) {
     scrollPosition = window.pageYOffset;
   }
-  console.log(scrollPosition);
 });
 
 closeModalBtn.addEventListener('click', onCloseBtnClick);
