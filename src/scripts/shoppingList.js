@@ -1,5 +1,6 @@
 import './changeTheam';
 import './mobile-menu';
+import './support';
 import {
   createBookMarkup,
   createEmptyBackground,
