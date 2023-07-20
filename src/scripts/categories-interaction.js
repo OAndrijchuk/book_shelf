@@ -72,7 +72,7 @@ function createCardMarkup(listMap, searchQuery) {
 
   const highlightedQuery = searchQuery.replace(lastWord, coloredSpan.outerHTML);
 
-  container.innerHTML = `<div class="container">
+  container.innerHTML = `<div class="container grid-wrapper">
   <h1 class="books-section-title">${highlightedQuery}</h1>
   <ul class="card-list">${listMap}</ul>
   </div>`;
