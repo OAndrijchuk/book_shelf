@@ -29,6 +29,13 @@ function createTopBooksListMarkup(topBooksList, amount) {
 }
 
 export function updateScreenWidth() {
+  topBooksSection.addEventListener('click', onSeeMoreBtn);
+
+  function onSeeMoreBtn(event) {
+    const listName = event.target.dataset.listname;
+    chooseCategory(listName);
+  }
+
   if (resizeTimeout) {
     clearTimeout(resizeTimeout);
   }
