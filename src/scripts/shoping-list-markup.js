@@ -44,7 +44,7 @@ export function createBookMarkup(object) {
     <a class="test-link" href="${bookshop.url}"><svg width="16" height="16" class="shopping-list-bookshop"><use href="${iconsSL}#icon-book-shops-logo"></use></svg></a>
        </div>
       <button class="shopping-list-book-btn">
-      <svg class="shopping-list-book-btn-icon" width="16" height="16"><use href="${iconsSL}#icon-bag"></use></svg></button>
+      <svg class="shopping-list-book-btn-icon" width="16" height="16"><use href="${iconsSL}#icon-trash"></use></svg></button>
     </div>
   
     </div>

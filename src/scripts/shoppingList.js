@@ -9,6 +9,10 @@ import {
 import { FetchBook } from './api';
 import emptyImage from '../images/empty-cont-img.png';
 
+const mobileLinks = document.querySelectorAll('.mob-menu-link');
+mobileLinks.forEach(el => el.classList.remove('activ-page'));
+mobileLinks[0].classList.add('activ-page');
+
 const menuLinks = document.querySelectorAll('.menu-link');
 menuLinks.forEach(el => el.classList.remove('activ-page'));
 menuLinks[1].classList.add('activ-page');
