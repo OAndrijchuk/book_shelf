@@ -1,53 +1,84 @@
 <header class="header">
   <div class="container header-container">
-    <div class="logo">
-      <a class="logo-link link" href="./index.html">
-        <svg class="logo-icon" width="24" height="24">
-          <use href="./images/sprite.svg#icon-general-logo"></use>
-        </svg>
-        <svg class="logo-text" width="77" height="14">
-          <use href="./images/sprite.svg#icon-Bookshelf"></use>
-        </svg>
-      </a>
-    </div>
+    <div class="nav-container">
+      <div class="logo">
+        <a class="logo-link link" href="./index.html">
+          <svg class="logo-icon" width="24" height="24">
+            <use href="./images/sprite.svg#icon-general-logo"></use>
+          </svg>
+          <svg class="logo-text" width="77" height="14">
+            <use href="./images/sprite.svg#icon-Bookshelf"></use>
+          </svg>
+        </a>
+      </div>
 
-    <nav class="header-menu is-hidden">
-      <ul class="menu list">
-        <li class="menu-item">
-          <a class="menu-link link" href="./index.html">Home</a>
-        </li>
-        <li class="menu-item">
-          <a class="menu-link link shopping-link" href="#"
-            >Shopping list
-            <svg class="shopping-list-icon" width="20" height="20">
-              <use href="./images/sprite.svg#icon-bag"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <nav class="header-menu">
+        <ul class="menu list">
+          <li class="menu-item">
+            <a class="menu-link link" href="./index.html">Home</a>
+          </li>
+          <li class="menu-item">
+            <a class="menu-link link shopping-link" href="./shoppingList.html"
+              >Shopping list
+              <svg class="shopping-list-icon" width="20" height="20">
+                <use href="./images/sprite.svg#icon-bag"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
     <div class="user-settings">
       <div class="theme-switcher">
         <label class="switch">
-          <input type="checkbox" />
+          <input type="checkbox" class="js-switcher" />
           <span class="slider round"></span>
         </label>
       </div>
-      <div class="burger-menu">
+      <button type="button" class="burger-menu">
         <svg class="burger-menu-svg" width="28" height="28">
           <use href="./images/sprite.svg#icon-align-left-black"></use>
         </svg>
-      </div>
-    </div>
-
-    <div class="sign-up-block is-hidden">
-      <button type="button" class="sign-up-btn">
-        Sign up
-        <svg class="right-arrow-icon" width="28" height="28">
-          <use href="./images/sprite.svg#icon-right_arrow"></use>
-        </svg>
+        <div
+          class="close-menu-icon-cont visually-hidden"
+          width="28"
+          height="28"
+        >
+          <svg class="close-menu-icon" width="14" height="14">
+            <use href="./images/sprite.svg#icon-close_Icon"></use>
+          </svg>
+        </div>
       </button>
+      <div class="sign-up-block">
+        <button type="button" class="sign-up-btn">
+          Sign up
+          <svg class="right-arrow-icon" width="28" height="28">
+            <use href="./images/sprite.svg#icon-right_arrow"></use>
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </header>
+
+<!-- Mobile menu -->
+<section class="mobile-menu-nav">
+  <div class="mob-menu-wrapper">
+    <ul class="mob-menu list">
+      <li class="mob-menu-item">
+        <a class="mob-menu-link" href="./index.html">Home</a>
+      </li>
+      <li class="mob-menu-item">
+        <a class="mob-menu-link shopping-link" href="./shoppingList.html"
+          >Shopping list
+          <svg class="shopping-list-icon" width="20" height="20">
+            <use href="./images/sprite.svg#icon-bag"></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="img"></div>
+</section>
+<!-- End Menu -->

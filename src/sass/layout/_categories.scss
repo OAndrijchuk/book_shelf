@@ -1,23 +1,40 @@
-.categories-name {
+/* Categories */
+.categories-list {
+  width: 100%;
+
+  @media screen and(min-width: 768px) {
+    width: 337px;
+  }
+}
+
+.categories-list-name {
   margin-bottom: 24px;
   color: $categories-text-color;
   font-family: DM Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 700;
-  line-height: 18px; /* 112.5% */
+  line-height: 18px;
   letter-spacing: -0.32px;
   text-transform: uppercase;
 
   @media screen and (min-width: 768px) {
     margin-bottom: 32px;
     font-size: 18px;
-    line-height: 24px; /* 133.333% */
+    line-height: 24px;
     letter-spacing: -0.36px;
   }
 }
 
-.nav-list {
+.aside {
+  width: 337px;
+
+  @media screen and (min-width: 768px) {
+    width: 356px;
+  }
+}
+
+.aside-list {
   display: flex;
   flex-direction: column;
   gap: 24px;
@@ -30,19 +47,19 @@
   }
 }
 
-.nav-link {
+.aside-link {
   color: $categories-text-color;
   font-family: DM Sans;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 112.5% */
+  line-height: 18px;
   letter-spacing: -0.32px;
   transition: $anim-tranz-parameters;
 
   &:hover,
   :focus {
-    color: #4f2ee8;
+    color: $accent-color;
   }
 
   @media screen and (min-width: 768px) {
@@ -50,4 +67,131 @@
     line-height: 24px; /* 133.333% */
     letter-spacing: -0.36px;
   }
+}
+
+.aside-list {
+  scrollbar-width: thin;
+}
+
+/* Работает в Chrome, Edge и Safari */
+.aside-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.aside-list::-webkit-scrollbar-track {
+  background: $light-color;
+}
+
+.aside-list::-webkit-scrollbar-thumb {
+  background-color: #e0e0e0;
+  border-radius: 12px;
+}
+
+/* Books */
+.books-section-title {
+  margin-bottom: 40px;
+  text-align: center;
+  color: $dark-color;
+  font-family: DM Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 38px; /* 118.75% */
+  letter-spacing: -1.28px;
+}
+
+.card-list {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  @media screen and (min-width: 1440px) {
+  }
+}
+
+.cards-item {
+  margin-bottom: 40px;
+
+  &:nth-last-child(-n + 1) {
+    margin-bottom: 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 218px;
+    margin-right: 25px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    width: 180px;
+    margin-right: 24px;
+
+    &:nth-child(3n) {
+      margin-right: 24px;
+    }
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+
+    &:nth-last-child(-n + 3) {
+      margin-bottom: 40px;
+    }
+
+    &:nth-last-child(-n + 5) {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cards-header {
+  margin-bottom: 14px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cards-img {
+  width: 100%;
+  height: 485px;
+
+  @media screen and (min-width: 768px) {
+    height: 316px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 256px;
+  }
+}
+
+.cards-title {
+  margin-bottom: 4px;
+  color: $dark-color;
+  font-family: DM Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px; /* 112.5% */
+  letter-spacing: -0.64px;
+  text-transform: uppercase;
+}
+
+.cards-author {
+  color: $secondery-text-color;
+  font-family: DM Sans;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 14px; /* 116.667% */
+  letter-spacing: -0.48px;
 }
