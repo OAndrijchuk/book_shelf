@@ -9,7 +9,7 @@
 
 .shop-list-empty-paragraph {
   margin-top: 120px;
-  color: rgba(0, 0, 0, 0.60);
+  color: rgba(0, 0, 0, 0.6);
   text-align: center;
   font-family: DM Sans;
   font-size: 14px;
@@ -23,7 +23,6 @@
 .shop-list-empty-img {
   max-width: 265px;
   max-height: 198px;
-
 }
 
 .shop-list-title {
@@ -38,7 +37,7 @@
 }
 
 .shop-list-title-span {
-  color: #4F2EE8;
+  color: #4f2ee8;
 }
 
 .shopping-list {
@@ -133,9 +132,9 @@
   display: flex;
   align-items: center;
   position: absolute;
-  bottom: 14px;
+  bottom: 4px;
   right: 14px;
-  gap: 8px;
+  gap: 1px;
 }
 
 .shopping-list-amazon {
@@ -159,8 +158,8 @@
   position: absolute;
   top: 14px;
   right: 14px;
-  background-color: #4F2EE8;
-    border-radius: 50%;
+  background-color: #4f2ee8;
+  border-radius: 50%;
 }
 
 .shopping-list-book-btn-icon {
@@ -168,7 +167,6 @@
 }
 
 @media screen and (min-width: 768px) {
-
   .shop-list-empty-container {
     gap: 20px;
   }
@@ -237,7 +235,6 @@
     font-weight: 400;
     line-height: 1.28; /* 128.571% */
     letter-spacing: -0.56px;
-   
   }
 
   .shopping-list-book-author {
@@ -272,7 +269,7 @@
 
   .shopping-list-bookshop {
     width: 32px;
-    height: 30px; 
+    height: 30px;
   }
 
   .shopping-list-book-btn {
@@ -281,7 +278,6 @@
     position: absolute;
     top: 24px;
     right: 24px;
-  
   }
 
   .shopping-list-book-btn-icon {
@@ -292,6 +288,10 @@
 }
 
 @media screen and (min-width: 1440px) {
+  .shopping-list-container {
+    min-width: 996px;
+    min-height: 1000px;
+  }
   .shopping-list-book-item {
     display: flex;
     padding: 30px 24px;
@@ -343,7 +343,6 @@
     font-weight: 400;
     line-height: 1.28; /* 128.571% */
     letter-spacing: -0.56px;
-    
   }
 
   .shopping-list-book-author {
@@ -377,5 +376,28 @@
   .shopping-list-book-icon {
     width: 34px;
     height: 34px;
+  }
+}
+
+.dark {
+  .shop-list-title,
+  .shopping-list-book-item,
+  .shopping-list-book-text,
+  .shopping-list-book-title,
+  .shopping-list-book-description,
+  .shop-list-empty-paragraph {
+    color: #fff;
+  }
+  .shopping-list-book-category,
+  .shopping-list-book-author {
+    color: #b4afaf;
+  }
+
+  .shopping-list-amazon,
+  .shopping-list-apple {
+    fill: currentColor;
+  }
+  .shopping-list-bookshop {
+    fill: white;
   }
 }
