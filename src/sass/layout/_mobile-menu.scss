@@ -11,9 +11,6 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
-.no-scroll{
-    overflow: hidden;
-}
 
 .mobile-menu-nav {
     position: absolute;
@@ -98,7 +95,8 @@
 @media screen and (min-width: 768px) {
 
     .burger-menu-svg,
-    .close-menu-icon {
+    .close-menu-icon,
+    .mobile-menu-nav {
         display: none;
     }
 }
