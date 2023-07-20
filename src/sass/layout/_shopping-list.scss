@@ -262,6 +262,7 @@
     line-height: 1.16; /* 116.667% */
     letter-spacing: -0.48px;
     bottom: 28px;
+    max-width: 250px;
   }
 
   .shopping-list-book-links {
@@ -370,6 +371,7 @@
     line-height: 1.16; /* 116.667% */
     letter-spacing: -0.48px;
     bottom: 28px;
+    max-width: 700px;
   }
 
   .shopping-list-book-links {
@@ -412,9 +414,10 @@
 
   .shopping-list-amazon,
   .shopping-list-apple {
-    fill: currentColor;
+    fill: #4f2ee8;
+    stroke: #4f2ee8;
   }
   .shopping-list-bookshop {
-    fill: white;
+    fill: #4f2ee8;
   }
 }
