@@ -9,6 +9,6 @@ function showMobileMenu(event) {
   document.body.classList.toggle('modal-open');
   burgerIco.classList.toggle('visually-hidden');
   closeIco.classList.toggle('visually-hidden');
-  mobileMenu.classList.toggle('is-open');
+  mobileMenu.classList.toggle('is-open-mob-menu');
 }
 // style="overflow: hidden;"
