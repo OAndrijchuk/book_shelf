@@ -56,40 +56,61 @@ const charities = [
   },
 ];
 
-  
-  const charityLogosContainer = document.querySelector('.charity-logos');
-  const expandBtn = document.querySelector('.support-button');
+const charityLogosContainer = document.querySelector('.charity-logos');
+const expandBtn = document.querySelector('.support-button');
+const iconButtonAngle = document.querySelector('.icon-button-angle');
+const supportContainer = document.querySelector('.support-container');
+
+function createCharityLogo(charity, index) {
+  const formattedIndex = (index + 1).toString().padStart(2, '0');
+
+  return `<li class="support-link">
+            <span class="logo-index" >${formattedIndex}</span>
+            <a class="support-link-url" href="${charity.url}" target="_blank"> 
+              <img class="support-link-img" src="${charity.img}" alt="${charity.title}"/>
+            </a>
+          </li>`;
+}
+
+function displayAllCharities() {
+  charityLogosContainer.innerHTML = charities.map(createCharityLogo).join('');
+}
 
 expandBtn.addEventListener('click', expandSection);
 
-  console.dir(charityLogosContainer)
-
-  function createCharityLogo(charity, index) {
-    const formattedIndex = (index + 1).toString().padStart(2, '0');
-  
-    return `<li class="support-link">
-              <span class="logo-index" >${formattedIndex}</span>
-              <a href="${charity.url}" target="_blank"> 
-                <img src="${charity.img}" alt="${charity.title}"/>
-              </a>
-            </li>`;
-  }
-
-  function displayAllCharities() {
-    charityLogosContainer.innerHTML = charities.map(createCharityLogo).join('');
-  }
-  charityLogosContainer.style.height = '352px';
-  function expandSection() {
-    if (charityLogosContainer.style.height === '352px') {
+function expandSection() {
+  if (window.innerWidth <= 767) {
+    
+    if (charityLogosContainer.clientHeight === 352) {
       charityLogosContainer.style.height = '100%';
+      iconButtonAngle.style.transform = 'rotate(-180deg)';
     } else {
       charityLogosContainer.style.height = '352px';
+      iconButtonAngle.style.transform = 'rotate(0deg)';
+    }
+  } else if (window.innerWidth >= 768 && window.innerWidth < 1439) {
+    
+    if (charityLogosContainer.clientHeight === 472) {
+      charityLogosContainer.style.height = '100%';
+      iconButtonAngle.style.transform = 'rotate(-180deg)';
+    } else {
+      charityLogosContainer.style.height = '472px';
+      iconButtonAngle.style.transform = 'rotate(0deg)';
+    }
+  } else {
+    
+    if (charityLogosContainer.clientHeight === 490) {
+      charityLogosContainer.style.height = '100%';
+      iconButtonAngle.style.transform = 'rotate(-180deg)';
+    } else {
+      charityLogosContainer.style.height = '490px';
+      iconButtonAngle.style.transform = 'rotate(0deg)';
     }
   }
-  
-  displayAllCharities();
+}
 
 
-  
+displayAllCharities();
+
 
   

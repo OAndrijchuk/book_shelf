@@ -1,23 +1,31 @@
 .section-support {
-  width: 335px;
-  // height: auto;
-  flex-shrink: 0;
-  border-radius: 16px;
+ 
+}
+
+.section-support > .container {
+  position: relative;
+  padding-bottom: 65px;
+  padding-top: 24px;
+  padding-left: 40px;
+  padding-right: 40px;
   background: radial-gradient(
     189.32% 190.93% at 59.76% -23.42%,
-    #4f2ee8 18.03%,
-    #fff 100%
+    $accent-color 18.03%,
+    $light-color 100%
   );
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
+  flex-shrink: 0;
+  border-radius: 16px;
 }
+
 .header-support {
-  color: #ffffff;
+  color: $light-color;
   display: flex;
   align-items: center;
   text-transform: capitalize;
 }
 .logo-index {
-  color: #fff;
+  color: $light-color;
   font-family: DM Sans;
   font-size: 14px;
   font-style: normal;
@@ -26,14 +34,15 @@
   letter-spacing: -0.56px;
 }
 .img-support {
+  stroke: $light-color;
   margin-left: 12px;
   
 }
+.support-link-img {
+}
 
 .charity-logos {
-  height: 352px;
   overflow: hidden;
-  
 }
 
 .support-link {
@@ -41,30 +50,63 @@
   align-items: center;
 }
 
-a {
+.support-link-url {
   margin: 10px;
-  img {
+  .support-link-img {
     filter: brightness(0) invert(1);
-    // height: auto;
     transition: transform 0.3s ease;
     &:hover {
       transform: scale(1.1);
     }
   }
 }
+.icon-button {
+  fill: $btn-color;
+}
 .support-button {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  height: 38px;
+  width: 38px;
   display: block;
   margin: 0 auto;
-  padding-bottom: 20px;
-  border: none;
-  font-size: 16px;
-  position: relative; 
+  border-radius: 50%;
+  background-color: $light-color;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   
 }
 
 .icon-button-angle {
-  position: absolute;
-  right: 50%;
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  fill: $btn-color;
+  transition: transform 0.3s ease; 
+}
+
+@media screen and (max-width: 767px) {
+  .section-support > .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 335px;
+    min-height: 352px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .section-support > .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    min-height: 472px; 
+  }
+}
+
+
+@media screen and (min-width: 1440px) {
+  .section-support > .container {
+    margin-bottom: 86px;
+    max-width: 356px; 
+    min-height: 490px; 
+}
 }
