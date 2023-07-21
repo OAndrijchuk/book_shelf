@@ -5,7 +5,7 @@ function renderTopBooksItem(topBooksItem) {
     .map(({ title, author, book_image, _id }) => {
       return `
         <li class="card-item">
-          <button type="button" data-id=${_id} class="card-wrapper-btn">
+          <button type="button" data-id=${_id} class="card-wrapper-btn card-hover">
             <div loading="lazy" data-id=${_id} class="book-image" style="background-image: url(${book_image})"></div>
             <p class="hover-text">quick view</p>
           </button>
