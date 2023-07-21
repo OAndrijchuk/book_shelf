@@ -54,9 +54,9 @@
   margin-bottom: 20px;
   transition: 100ms ease-in-out;
 }
-.shopping-list-book-item:hover {
-  transform: scale(1.01);
-}
+// .shopping-list-book-item:hover {
+//   transform: scale(1.01);
+// }
 
 .shopping-list-book-img {
   width: 100px;
@@ -145,16 +145,24 @@
 .shopping-list-amazon {
   width: 32px;
   height: 11px;
+  transition: 250ms;
+}
+.shopping-list-amazon:hover,
+.shopping-list-apple:hover,
+.shopping-list-bookshop:hover {
+  transform: scale(1.6);
 }
 
 .shopping-list-apple {
   width: 16px;
   height: 16px;
+  transition: 250ms;
 }
 
 .shopping-list-bookshop {
   width: 16px;
   height: 16px;
+  transition: 250ms;
 }
 
 .shopping-list-book-btn {
