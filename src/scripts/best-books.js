@@ -35,11 +35,6 @@ export function updateScreenWidth() {
   function onSeeMoreBtn(event) {
     const listName = event.target.dataset.listname;
     chooseCategory(listName);
-
-    topBooksSection.scrollIntoView({
-      block: 'start',
-      behavior: 'smooth',
-    });
   }
 
   if (resizeTimeout) {
