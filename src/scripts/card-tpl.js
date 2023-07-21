@@ -2,7 +2,7 @@ export function createCardTpl(card) {
   const { book_image, title, author, _id } = card;
   return `
     <li class="cards-item">
-      <a class="cards-link" href="#" data-id="${_id}">
+      <a class="cards-link card-hover" href="#" data-id="${_id}">
         <div class="cards-header" data-id="${_id}">
           <img class="cards-img" src="${book_image}" alt="${title}" loading="lazy" data-id="${_id}" />
         </div>
