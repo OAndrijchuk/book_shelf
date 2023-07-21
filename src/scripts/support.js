@@ -8,9 +8,6 @@ import img7 from '../images/support/ActionAgHunger.png'
 import img8 from '../images/support/WorldVision.png'
 import img9 from '../images/support/SergPritula.png'
 
-// import smoothscroll from 'smoothscroll-polyfill';
-// smoothscroll.polyfill();
-
 const charities = [
   {
     title: 'Save the Children',
@@ -85,7 +82,7 @@ function expandSection() {
   const isExpanded = supportContainer.classList.contains('expanded');
 
   if (!isExpanded) {
-    supportContainer.style.height = '100%';
+    supportContainer.style.height = 'auto';
     supportContainer.classList.add('expanded');
     iconButtonAngle.style.transform = 'rotate(-180deg)';
   } else {
@@ -95,62 +92,8 @@ function expandSection() {
   }
 }
 
+supportContainer.style.height = '0';
+supportContainer.classList.remove('expanded');
+
 
 displayAllCharities();
-
-
-
-
-
-// function expandSection() {
-//   const containerHeight = supportContainer.clientHeight;
-//   const isExpanded = supportContainer.classList.contains('expanded');
-
-//   if (!isExpanded) {
-//     supportContainer.style.height = `${containerHeight}px`;
-//     supportContainer.classList.add('expanded');
-//     iconButtonAngle.style.transform = 'rotate(-180deg)';
-//   } else {
-//     supportContainer.style.height = '0';
-//     supportContainer.classList.remove('expanded');
-//     iconButtonAngle.style.transform = 'rotate(0deg)';
-//   }
-// }
-
-
-
-
-// function expandSection() {
-//   if (window.innerWidth <= 767) {
-    
-//     if (charityLogosContainer.clientHeight === 352) {
-//       charityLogosContainer.style.height = '100%';
-//       iconButtonAngle.style.transform = 'rotate(-180deg)';
-//     } else {
-//       charityLogosContainer.style.height = '352px';
-//       iconButtonAngle.style.transform = 'rotate(0deg)';
-//     }
-//   } else if (window.innerWidth >= 768 && window.innerWidth < 1439) {
-    
-//     if (charityLogosContainer.clientHeight === 472) {
-//       charityLogosContainer.style.height = '100%';
-//       iconButtonAngle.style.transform = 'rotate(-180deg)';
-//     } else {
-//       charityLogosContainer.style.height = '472px';
-//       iconButtonAngle.style.transform = 'rotate(0deg)';
-//     }
-//   } else {
-    
-//     if (charityLogosContainer.clientHeight === 490) {
-//       charityLogosContainer.style.height = '100%';
-//       iconButtonAngle.style.transform = 'rotate(-180deg)';
-//     } else {
-//       charityLogosContainer.style.height = '490px';
-//       iconButtonAngle.style.transform = 'rotate(0deg)';
-//     }
-//   }
-// }
-// displayAllCharities();
-
-
-  
