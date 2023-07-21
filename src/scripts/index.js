@@ -6,3 +6,4 @@ import './modal';
 import './modal-markup';
 import './header';
 import './mobile-menu';
+import './scroll-up-btn';
