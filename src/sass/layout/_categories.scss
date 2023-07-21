@@ -1,31 +1,38 @@
 /* Классы для темной темы */
-.aside-dark {
-  &.activ-name {
-    color: $select-el-color;
-  }
-  &.categories-list-name {
+.dark {
+  .categories-list-name {
     color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    :focus {
+      color: $select-el-color;
+    }
   }
-  &.aside-link {
+  .aside-link {
     color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    :focus {
+      color: $select-el-color;
+    }
   }
-  &.aside-list::-webkit-scrollbar-track {
+  .aside-list::-webkit-scrollbar-track {
     background: $dark-body-bg-color;
   }
-  &.aside-list::-webkit-scrollbar-thumb {
+  .aside-list::-webkit-scrollbar-thumb {
     background-color: $dark-color;
   }
-}
-
-.books-dark {
-  &.books-section-title {
+  .books-section-title {
     color: $light-color;
   }
-  &.cards-title {
+  .cards-title {
     color: $light-color;
   }
-  &.cards-author {
+  .cards-author {
     color: $secondery-text-color;
+  }
+  .activ-name {
+    color: $select-el-color;
   }
 }
 
@@ -55,7 +62,7 @@
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 18px; /* 112.5% */
+  line-height: 18px;
   letter-spacing: -0.32px;
   transform: color $anim-tranz-parameters;
 
@@ -145,7 +152,7 @@
 /* Books */
 .books-section-title {
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left;
   color: $dark-color;
   font-family: DM Sans;
   font-size: 32px;
