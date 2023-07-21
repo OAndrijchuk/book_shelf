@@ -6,6 +6,7 @@ import { updateScreenWidth } from './best-books';
 const asideList = document.querySelector('.aside-list');
 const container = document.querySelector('.cont-section');
 const categoriesListName = document.querySelector('.categories-list-name');
+const getLoaderEl = document.querySelector('.loader-inner');
 
 const fetchBook = new FetchBook();
 
@@ -20,6 +21,7 @@ function changeColor() {
 
     event.target.classList.add('activ-name');
     updateScreenWidth();
+    scrollToSecton();
   });
 }
 
@@ -53,6 +55,8 @@ function onCategoryClick(event) {
     return;
   }
 
+  scrollToSecton(event);
+
   categoriesListName.classList.remove('activ-name');
   const asideLink = document.querySelectorAll('.aside-link');
 
@@ -61,7 +65,6 @@ function onCategoryClick(event) {
   });
 
   target.classList.add('activ-name');
-
   const searchQuery = target.textContent;
   chooseCategory(searchQuery);
 }
@@ -81,6 +84,8 @@ function searchCategoryText(categoryName) {
 
 export function chooseCategory(searchQuery) {
   searchCategoryText(searchQuery);
+  getLoaderEl.style.display = 'flex';
+
   fetchBook
     .fetchElement(`/category?category=${searchQuery}`)
     .then(categories => {
@@ -91,6 +96,9 @@ export function chooseCategory(searchQuery) {
     })
     .catch(error => {
       console.warn(error);
+    })
+    .finally(() => {
+      getLoaderEl.style.display = 'none';
     });
 }
 
@@ -105,13 +113,26 @@ function createCardMarkup(listMap, searchQuery) {
   const highlightedQuery = searchQuery.replace(lastWord, coloredSpan.outerHTML);
 
   container.innerHTML = `<div class="container grid-wrapper">
-  <h1 class="books-section-title">${highlightedQuery}</h1>
+  <h1 class="books-section-title" id="section-title"">${highlightedQuery}</h1>
   <ul class="card-list">${listMap}</ul>
   </div>`;
 
-  container.scrollIntoView({
-    block: 'start',
-    inline: 'nearest',
+  // container.scrollIntoView({
+  //   block: 'start',
+  //   inline: 'nearest',
+  //   behavior: 'smooth',
+  // });
+}
+
+function scrollToSecton(event) {
+  const getSectionId = document.querySelector(
+    '#' + event.target.dataset.scroll
+  );
+
+  const sectionTop = getSectionId.offsetTop;
+
+  window.scrollTo({
+    top: sectionTop,
     behavior: 'smooth',
   });
 }
