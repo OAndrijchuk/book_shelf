@@ -4,7 +4,6 @@ import { chooseCategory } from './categories-interaction';
 const topBooksSection = document.querySelector('.cont-section');
 const getLoaderEl = document.querySelector('.loader-inner');
 const fetchBook = new FetchBook();
-const widthScreen = window.innerWidth;
 
 let resizeTimeout;
 
@@ -37,13 +36,10 @@ export function updateScreenWidth() {
     const listName = event.target.dataset.listname;
     chooseCategory(listName);
 
-    let scrollPosition = 0;
-    if (widthScreen >= 1440) {
-      scrollPosition;
-    } else {
-      scrollPosition = 640;
-    }
-    window.scrollTo({ top: scrollPosition, behavior: 'smooth' });
+    topBooksSection.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    });
   }
 
   if (resizeTimeout) {
