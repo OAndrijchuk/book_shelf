@@ -93,7 +93,7 @@ function markapBtn(id) {
 }
 
 function addBtnMarkup(id) {
-  return `<button class="modal-active-btn js-addBtn" data-id="${id}">
+  return `<button class="modal-active-btn-add js-addBtn" data-id="${id}">
       add to shopping list
     </button>`;
 }
