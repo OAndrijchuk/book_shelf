@@ -1,16 +1,20 @@
-.dark{
+.dark {
     .modal {
         background-color: #202024;
     }
+
     .modal-wrapper {
         background-color: #202024;
     }
+
     .modal-list-title {
         color: #FFF;
     }
-    .modal-description{
+
+    .modal-description {
         color: #FFF;
     }
+
     .modal-active-btn {
         background-color: #202024;
         color: #FFF;
@@ -19,11 +23,12 @@
     .modal-active-btn-add {
         background-color: #202024;
         color: #FFF;
-     }  
+    }
 
     .modal-shop-item:first-child {
         fill: #FFFFFF;
     }
+
     .modal-close-icon {
         stroke: #FFFFFF;
     }
@@ -36,7 +41,7 @@
 .modal-open {
     height: 100vh;
     overflow-y: hidden;
-      }
+}
 
 .backdrop {
     display: flex;
@@ -66,21 +71,27 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     position: relative;
-    
-    }
 
-    .modal-wrapper {
-        display: block;
-        gap: 24px;
-        margin-top: 40px;
-        width: 287px;
-    }
+}
+
+.modal-center-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-wrapper {
+    display: block;
+    gap: 24px;
+    margin-top: 40px;
+    width: 287px;
+}
 
 .modal-image {
     width: 287px;
     height: 408px;
     border-radius: 8px;
-    
+
 }
 
 .is-hidden {
@@ -107,59 +118,59 @@
         color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        
+
 }
 
 .modal-close-icon {
     stroke: #111111;
     width: 12px;
     height: 12px;
-    }
+}
 
 .modal-close-icon:hover,
 .modal-close-icon:focus {
     stroke: #4F2EE8;
     scale: 1.5;
-  }
+}
 
 .modal-list-title {
-color: #111111;
-font-family: DM Sans, sans-serif;
-font-size: 16px;
-font-weight: 700;
-line-height: 1.13;
-letter-spacing: -0.64px;
-margin-top: 14px;
+    color: #111111;
+    font-family: DM Sans, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.13;
+    letter-spacing: -0.64px;
+    margin-top: 14px;
 }
 
 .modal-list-autor {
     color: #B4AFAF;
-font-family: DM Sans,
-    sans-serif;
-font-size: 12px;
-font-style: italic;
-font-weight: 400;
-line-height: 1.17;
-letter-spacing: -0.48px;
-margin-top: 4px;
+    font-family: DM Sans,
+        sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 1.17;
+    letter-spacing: -0.48px;
+    margin-top: 4px;
 }
 
 .modal-description {
     color: #111111;
-font-family: DM Sans,
-    sans-serif;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 1.29;
-letter-spacing: -0.56px;
-margin-top: 18px;
-max-width: 287px;
+    font-family: DM Sans,
+        sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.29;
+    letter-spacing: -0.56px;
+    margin-top: 18px;
+    max-width: 287px;
 }
 
 .modal-shop-icons {
     display: flex;
-    
+
     flex-wrap: wrap;
     gap: 20px;
     max-width: 287px;
@@ -168,17 +179,17 @@ max-width: 287px;
 
 .modal-active-btn-add {
     color: #111111;
-        font-family: DM Sans, sans-serif;
-        font-size: 14px;
-        font-weight: 700;
-        line-height: 1.29;
-        letter-spacing: -0.14px;
-        text-transform: uppercase;
-        width: 279px;
-        height: 46px;
-        border-radius: 40px;
-        border: 2px solid #4F2EE8;
-        margin: 40px 0;
+    font-family: DM Sans, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.29;
+    letter-spacing: -0.14px;
+    text-transform: uppercase;
+    width: 279px;
+    height: 46px;
+    border-radius: 40px;
+    border: 2px solid #4F2EE8;
+    margin: 40px 0;
 }
 
 .modal-active-btn-add:hover,
@@ -203,10 +214,10 @@ max-width: 287px;
 }
 
 .modal-active-btn:hover,
-    .modal-active-btn:focus {
-        color: #FFF;
-        background-color: #4F2EE8;
-    }
+.modal-active-btn:focus {
+    color: #FFF;
+    background-color: #4F2EE8;
+}
 
 .modal-congratulations-text {
     max-width: 242px;
@@ -240,17 +251,20 @@ max-width: 287px;
         border-radius: 18px;
         border: 2px solid #111;
     }
+
     .modal-wrapper {
         display: flex;
         gap: 24px;
         width: 499px;
     }
+
     .modal-image {
         width: 192px;
         height: 281px;
         border-radius: 15px;
         margin-top: 0;
     }
+
     .modal-list-autor {
         margin-top: 8px;
         font-size: 14px;
@@ -258,6 +272,7 @@ max-width: 287px;
         line-height: 1.29;
         letter-spacing: -0.56px;
     }
+
     .modal-list-title {
         color: #111111;
         font-family: DM Sans, sans-serif;
@@ -279,7 +294,7 @@ max-width: 287px;
         border-radius: 40px;
         border: 2px solid #4F2EE8;
         margin: 40px 0;
-        }
+    }
 
     .modal-active-btn {
         text-align: center;
@@ -292,7 +307,7 @@ max-width: 287px;
         border-radius: 40px;
         border: 2px solid #4F2EE8;
         margin-top: 40px;
-}
+    }
 
     .modal-close-btn {
         top: 24px;
@@ -300,29 +315,30 @@ max-width: 287px;
         width: 14px;
         height: 14px;
     }
-    .modal-close-icon {
-    width: 14px;
-    height: 14px;
-  }
-    .modal-shop-icons {
-    gap: 20px;
-    margin-top: 20px;
-}
-    .modal-list {
-    width: 279px;
-}
 
-.modal-congratulations-text {
-    max-width: 324px;
-  
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: -0.48px;
- }
+    .modal-close-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .modal-shop-icons {
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .modal-list {
+        width: 279px;
+    }
+
+    .modal-congratulations-text {
+        max-width: 324px;
+
+        font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: -0.48px;
+    }
 }
 
 /* -------------------------------1200px-------------------------------- */
 
-@media screen and (min-width: 1200px) {
-    
-}
+@media screen and (min-width: 1200px) {}

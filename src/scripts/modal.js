@@ -9,14 +9,15 @@ window.addEventListener('scroll', function (event) {
   }
 });
 
-closeModalBtn.addEventListener('click', onCloseBtnClick);
-backdrop.addEventListener('click', onCloseBtnClick);
-icon.addEventListener('click', onCloseBtnClick);
+
 
 export function onOpenModalBtnClick() {
   backdrop.classList.remove('is-hidden');
   document.body.classList.add('modal-open'); // Добавление класса для запрета прокрутки
   window.addEventListener('keydown', onEscBtnPush);
+  closeModalBtn.addEventListener('click', onCloseBtnClick);
+  backdrop.addEventListener('click', onCloseBtnClick);
+  icon.addEventListener('click', onCloseBtnClick);
 
   // Запрет прокрутки body
   document.body.style.overflow = 'hidden';
@@ -51,6 +52,9 @@ function onCloseBtnClick(event) {
   backdrop.classList.add('is-hidden');
   document.body.classList.remove('modal-open'); // Удаление класса для разрешения прокрутки
   window.removeEventListener('keydown', onEscBtnPush);
+  closeModalBtn.removeEventListener('click', onCloseBtnClick);
+  backdrop.removeEventListener('click', onCloseBtnClick);
+  icon.removeEventListener('click', onCloseBtnClick);
 
   if (!document.body.classList.contains('modal-open')) {
     window.scrollTo({
