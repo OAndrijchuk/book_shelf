@@ -169,17 +169,17 @@
   right: 14px;
   background-color: #4f2ee8;
   border-radius: 50%;
-  
+  transition: 60ms;
 }
 
 .shopping-list-book-btn:hover,
 .shopping-list-book-btn:focus {
   outline: 3px rgba(79, 46, 232, 0.30) solid;
-  transition: 60ms
 }
 
 .shopping-list-book-btn-icon {
   fill: white;
+  // pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
