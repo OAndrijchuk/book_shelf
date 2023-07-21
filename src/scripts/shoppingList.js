@@ -16,8 +16,6 @@ const menuLinks = document.querySelectorAll('.menu-link');
 menuLinks.forEach(el => el.classList.remove('activ-page'));
 menuLinks[1].classList.add('activ-page');
 
-const liItem = document.querySelector('.shopping-list-book-item');
-
 const container = document.querySelector('.cont-section');
 const bookMarkupsArr = [];
 const onShoppingClick = async event => {
@@ -40,7 +38,7 @@ const onShoppingClick = async event => {
 onShoppingClick();
 
 export function onDeleteClick(event) {
-  const allLiEl = [...document.querySelectorAll('.test')];
+  const allLiEl = [...document.querySelectorAll('.li-item')];
   const booksInChart = JSON.parse(localStorage.getItem('bookList')) || null;
   const deletingBookId = event.target.dataset.id;
   const bookIdx = booksInChart.indexOf(deletingBookId);
