@@ -4,7 +4,7 @@ import { chooseCategory } from './categories-interaction';
 const topBooksSection = document.querySelector('.cont-section');
 const getLoaderEl = document.querySelector('.loader-inner');
 const fetchBook = new FetchBook();
-const width = window.innerWidth;
+const widthScreen = window.innerWidth;
 
 let resizeTimeout;
 
@@ -30,6 +30,7 @@ function createTopBooksListMarkup(topBooksList, amount) {
 }
 
 export function updateScreenWidth() {
+  const width = window.innerWidth;
   topBooksSection.addEventListener('click', onSeeMoreBtn);
 
   function onSeeMoreBtn(event) {
@@ -37,7 +38,7 @@ export function updateScreenWidth() {
     chooseCategory(listName);
 
     let scrollPosition = 0;
-    if (width >= 1440) {
+    if (widthScreen >= 1440) {
       scrollPosition;
     } else {
       scrollPosition = 640;
