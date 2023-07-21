@@ -1,6 +1,4 @@
-const openModalBtn = document.querySelectorAll('[data-order-open]');
 const closeModalBtn = document.querySelector('[data-order-close]');
-const modal = document.querySelector('[data-order]');
 const backdrop = document.querySelector('[data-order-backdrop]');
 const icon = document.querySelector('.modal-close-icon');
 
@@ -22,8 +20,6 @@ export function onOpenModalBtnClick() {
 
   // Запрет прокрутки body
   document.body.style.overflow = 'hidden';
-
-  // When the modal is shown, we want a fixed body
 
   // Сохраняем текущую позицию прокрутки, только если модальное окно не открыто
   if (!document.body.classList.contains('modal-open')) {

@@ -168,6 +168,9 @@
   .hover-text {
     bottom: 0;
   }
+  .loader-inner {
+    justify-content: end;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -179,6 +182,12 @@
   }
   .book-image {
     height: 256px;
+  }
+  .loader-inner {
+    position: absolute;
+    top: 50%;
+    left: 65%;
+    transform: translate(-65%, -50%);
   }
 }
 .dark {
