@@ -1,5 +1,5 @@
 .section-support {
- 
+  overflow: hidden; 
 }
 
 .section-support > .container {
@@ -16,6 +16,7 @@
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
   flex-shrink: 0;
   border-radius: 16px;
+  
 }
 
 .header-support {
@@ -36,13 +37,14 @@
 .img-support {
   stroke: $light-color;
   margin-left: 12px;
-  
 }
 .support-link-img {
 }
 
 .charity-logos {
   overflow: hidden;
+  width: 100%;
+  height: calc(100% - 40px);
 }
 
 .support-link {
@@ -77,8 +79,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
-  
 }
 
 .icon-button-angle {
