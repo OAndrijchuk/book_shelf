@@ -16,7 +16,6 @@ async function onClickWrapper(event) {
   const fetchedBook = await fetchBook.fetchElement(
     `/${event.target.dataset.id}`
   );
-  console.log(fetchedBook);
   const { book_image, title, author, description } = fetchedBook;
   const { url: amazon } = fetchedBook.buy_links[0];
   const { url: apple } = fetchedBook.buy_links[1];

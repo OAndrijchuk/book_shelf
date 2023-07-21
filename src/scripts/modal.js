@@ -9,8 +9,6 @@ window.addEventListener('scroll', function (event) {
   }
 });
 
-
-
 export function onOpenModalBtnClick() {
   backdrop.classList.remove('is-hidden');
   document.body.classList.add('modal-open'); // Добавление класса для запрета прокрутки
@@ -48,7 +46,6 @@ function onCloseBtnClick(event) {
     return;
   }
 
-  console.log(event);
   backdrop.classList.add('is-hidden');
   document.body.classList.remove('modal-open'); // Удаление класса для разрешения прокрутки
   window.removeEventListener('keydown', onEscBtnPush);
