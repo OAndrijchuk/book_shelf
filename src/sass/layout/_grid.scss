@@ -28,7 +28,8 @@
     grid-template-areas:
       'header header'
       'aside-section cont-section'
-      'support cont-section';
+      'support cont-section'
+      '. cont-section';
   }
   .header {
     grid-area: header;
@@ -41,5 +42,6 @@
   }
   .cont-section {
     grid-area: cont-section;
+    min-width: 996px;
   }
 }

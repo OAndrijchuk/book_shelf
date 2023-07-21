@@ -1,4 +1,51 @@
+/* Классы для темной темы */
+.dark {
+  .categories-list-name {
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    :focus {
+      color: $select-el-color;
+    }
+  }
+  .aside-link {
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover,
+    :focus {
+      color: $select-el-color;
+    }
+  }
+  .aside-list::-webkit-scrollbar-track {
+    background: $dark-body-bg-color;
+  }
+  .aside-list::-webkit-scrollbar-thumb {
+    background-color: $dark-color;
+  }
+  .books-section-title {
+    color: $light-color;
+  }
+  .cards-title {
+    color: $light-color;
+  }
+  .cards-author {
+    color: $secondery-text-color;
+  }
+  .activ-name {
+    color: $select-el-color;
+  }
+}
+
 /* Categories */
+.activ-name {
+  color: $accent-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
+}
+
 .categories-list {
   width: 100%;
 
@@ -8,15 +55,21 @@
 }
 
 .categories-list-name {
+  display: block;
   margin-bottom: 24px;
-  color: $categories-text-color;
+  color: rgba(17, 17, 17, 0.6);
   font-family: DM Sans;
   font-size: 16px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.32px;
-  text-transform: uppercase;
+  transform: color $anim-tranz-parameters;
+
+  &:hover,
+  :focus {
+    color: $accent-color;
+  }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 32px;
@@ -55,7 +108,7 @@
   font-weight: 400;
   line-height: 18px;
   letter-spacing: -0.32px;
-  transition: $anim-tranz-parameters;
+  transition: color $anim-tranz-parameters;
 
   &:hover,
   :focus {
@@ -64,9 +117,18 @@
 
   @media screen and (min-width: 768px) {
     font-size: 18px;
-    line-height: 24px; /* 133.333% */
+    line-height: 24px;
     letter-spacing: -0.36px;
   }
+}
+
+.activ-name {
+  color: $accent-color;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+  text-transform: uppercase;
 }
 
 .aside-list {
@@ -90,13 +152,13 @@
 /* Books */
 .books-section-title {
   margin-bottom: 40px;
-  text-align: center;
+  text-align: left;
   color: $dark-color;
   font-family: DM Sans;
   font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 38px; /* 118.75% */
+  line-height: 38px;
   letter-spacing: -1.28px;
 }
 
@@ -134,7 +196,7 @@
   }
 
   @media screen and (min-width: 1440px) {
-    width: 180px;
+    width: 170px;
     margin-right: 24px;
 
     &:nth-child(3n) {

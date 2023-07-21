@@ -1,0 +1,29 @@
+.scroll-up-icon {
+   fill: $light-color;
+}
+.scroll-to-top{
+    position: fixed;
+    outline: 5px solid rgba(79, 46, 232, 0.3);
+    border-radius: 50%;
+    background-color: rgba(79, 46, 232, 1);
+    width: 54px;
+    height: 54px;
+    bottom: 16vh;
+    right: 6vw;
+    cursor: pointer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: rotate(180deg);
+    opacity: .9;
+}
+.scroll-to-top:before {
+    right: -100px;
+    border-right: 100px solid transparent;
+    border-top: 100px solid #2D6B9F;
+
+}
+.unvisually{
+    display: none;
+}

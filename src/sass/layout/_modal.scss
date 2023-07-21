@@ -1,11 +1,33 @@
-
 //! класс для тёмной темы
-.nigga{}
+.dark{
+    .modal {
+        background-color: #202024;
+    }
+    .modal-wrapper {
+        background-color: #202024;
+    }
+    .modal-list-title {
+        color: #FFF;
+    }
+    .modal-description{
+        color: #FFF;
+    }
+    .modal-active-btn {
+        background-color: #202024;
+        color: #FFF;
+    }
+    .modal-shop-item:first-child {
+        fill: #FFFFFF;
+    }
+    .modal-close-icon {
+        stroke: #FFFFFF;
+    }
+}
 
 .modal-open {
     height: 100vh;
     overflow-y: hidden;
-  }
+      }
 
 .backdrop {
     display: flex;
@@ -21,11 +43,12 @@
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 20;
 }
 
 .modal {
     min-width: 335px;
-    min-height: 806px;
+    min-height: 400px;
     background-color: #fff;
     border: 2px solid #111;
     border-radius: 15px;
@@ -35,13 +58,21 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
     position: relative;
-}
+    
+    }
+
+    .modal-wrapper {
+        display: block;
+        gap: 24px;
+        margin-top: 40px;
+        width: 287px;
+    }
 
 .modal-image {
     width: 287px;
     height: 408px;
     border-radius: 8px;
-    margin-top: 40px;
+    
 }
 
 .is-hidden {
@@ -58,17 +89,17 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    width: 24px;
-    height: 24px;
+    width: 14px;
+    height: 14px;
     border: none;
     background-color: transparent;
     align-items: center;
     justify-content: center;
-   
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         color 250ms cubic-bezier(0.4, 0, 0.2, 1),
         transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
         stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
 }
 
 .modal-close-icon {
@@ -78,9 +109,12 @@
     // cursor: pointer;
     }
 
+
+
 .modal-close-icon:hover,
 .modal-close-icon:focus {
-      stroke: #4F2EE8 ;
+    stroke: #4F2EE8;
+    scale: 1.5;
   }
 
 .modal-list-title {
@@ -139,7 +173,7 @@ max-width: 287px;
     height: 46px;
     border-radius: 40px;
     border: 2px solid #4F2EE8;
-    margin-top: 40px;
+    margin: 40px 0;
 }
 
 .modal-active-btn:hover,
@@ -183,7 +217,7 @@ max-width: 287px;
     .modal-wrapper {
         display: flex;
         gap: 24px;
-        margin-top: 40px;
+        width: 499px;
     }
     .modal-image {
         width: 192px;
@@ -225,8 +259,8 @@ max-width: 287px;
     .modal-close-btn {
         top: 24px;
         right: 24px;
-        width: 28px;
-        height: 28px;
+        width: 14px;
+        height: 14px;
     }
     .modal-close-icon {
     width: 14px;
@@ -237,7 +271,7 @@ max-width: 287px;
     margin-top: 20px;
 }
     .modal-list {
-    max-width: 279px;
+    width: 279px;
 }
 
 .modal-congratulations-text {

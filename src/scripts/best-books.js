@@ -29,11 +29,23 @@ function createTopBooksListMarkup(topBooksList, amount) {
 }
 
 export function updateScreenWidth() {
+  const width = window.innerWidth;
+  topBooksSection.addEventListener('click', onSeeMoreBtn);
+
+  function onSeeMoreBtn(event) {
+    const listName = event.target.dataset.listname;
+    chooseCategory(listName);
+
+    topBooksSection.scrollIntoView({
+      block: 'start',
+      behavior: 'smooth',
+    });
+  }
+
   if (resizeTimeout) {
     clearTimeout(resizeTimeout);
   }
   resizeTimeout = setTimeout(() => {
-    const width = window.innerWidth;
     window.removeEventListener('resize', updateScreenWidth);
 
     if (width >= 1440) {
