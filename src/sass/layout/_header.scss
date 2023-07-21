@@ -94,7 +94,7 @@
 
 @media screen and (min-width: 768px) {
     .header-container {
-        max-width: 768px;
+        min-width: 768px;
         }
 
     .sign-up-block {
@@ -116,7 +116,7 @@
 @media screen and (min-width: 1440px) {
 .header-container {
     padding: 14px 24px;
-    max-width: 1440px;
+    min-width: 1440px;
 }
 .nav-container {
     gap: 76px;

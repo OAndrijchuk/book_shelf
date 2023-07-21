@@ -44,7 +44,8 @@
 
 .mob-menu {
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    gap: 5px;
 }
 
 .is-open-mob-menu {
