@@ -5,8 +5,11 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  min-height: 50vh;
 }
-
+.section-support {
+  display: none;
+}
 .shop-list-empty-paragraph {
   margin-top: 120px;
   color: rgba(0, 0, 0, 0.6);
@@ -146,16 +149,12 @@
   height: 11px;
 }
 
-.shopping-list-amazon:hover,
-.shopping-list-amazon:focus {
-}
-
 .shopping-list-apple {
   width: 16px;
   height: 16px;
 }
 
-.shopping-list-book-apple {
+.shopping-list-bookshop {
   width: 16px;
   height: 16px;
 }
@@ -177,10 +176,16 @@
 }
 
 .shopping-list-book-btn-icon {
-  stroke: white;
+  stroke: #ffffff;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 768px) {
+  .shopping-list-container {
+    min-width: 704px;
+    min-height: 960px;
+  }
+
   .shop-list-empty-container {
     gap: 20px;
   }
@@ -198,74 +203,28 @@
   }
 
   .shopping-list-book-item {
-    display: flex;
     padding: 30px 24px;
-    border-radius: 16px;
-    border: 2px solid rgba(79, 46, 232, 0.4);
-    position: relative;
   }
 
   .shopping-list-book-img {
     width: 116px;
     height: 165px;
-    background: #f6f6f6;
     margin-right: 24px;
   }
 
-  .shopping-list-book-text {
-    display: flex;
-    flex-direction: column;
-  }
-
   .shopping-list-book-title {
-    color: #111;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: 1.12; /* 112.5% */
-    letter-spacing: -0.64px;
-    text-transform: uppercase;
-    margin-bottom: 4px;
     max-width: none;
   }
 
   .shopping-list-book-category {
-    color: #b4afaf;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.16; /* 116.667% */
-    letter-spacing: 0.36px;
     margin-bottom: 14px;
   }
 
-  .shopping-list-book-description {
-    color: #111;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.28; /* 128.571% */
-    letter-spacing: -0.56px;
-  }
-
   .shopping-list-book-author {
-    color: #b4afaf;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 12px;
-    font-style: italic;
-    font-weight: 400;
-    line-height: 1.16; /* 116.667% */
-    letter-spacing: -0.48px;
     bottom: 28px;
   }
 
   .shopping-list-book-links {
-    display: flex;
-    align-items: center;
-    position: absolute;
     bottom: 24px;
     right: 24px;
     gap: 16px;
@@ -289,7 +248,6 @@
   .shopping-list-book-btn {
     width: 34px;
     height: 34px;
-    position: absolute;
     top: 24px;
     right: 24px;
   }
