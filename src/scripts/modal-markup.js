@@ -35,19 +35,19 @@ async function onClickWrapper(event) {
           </p>
         </li>
         <div class="modal-shop-icons">
-          <li>
-          <a href="${amazon}" target="_blank" rel="noopener nofollow noreferrer"><svg class="modal-shop-item" width="44" height="36">
-              <use href="${icons}#icon-amazon"></use>
+          <li class="modal-center-icons">
+          <a href="${amazon}" target="_blank" rel="noopener nofollow noreferrer"><svg class="modal-shop-item" width="62" height="19">
+              <use href="${icons}#icon-amazon"  width="62" height="19"></use>
             </svg></a>
           </li>
-          <li>
-             <a href="${apple}" target="_blank" rel="noopener nofollow noreferrer"><svg class="modal-shop-item" width="44" height="36">
-              <use href="${icons}#icon-apple-books-logo"></use>
+          <li class="modal-center-icons">
+             <a href="${apple}" target="_blank" rel="noopener nofollow noreferrer"><svg class="modal-shop-item" width="33" height="32">
+              <use href="${icons}#icon-apple-books-logo" width="33" height="32"></use>
             </svg></a>
           </li>
-          <li>
-             <a href="${bookShop}" target="_blank" rel="noopener nofollow noreferrer"><svg class="modal-shop-item" width="44" height="36">
-              <use href="${icons}#icon-book-shops-logo"></use>
+          <li class="modal-center-icons">
+             <a href="${bookShop}" target="_blank" rel="noopener nofollow noreferrer"><svg class="modal-shop-item" width="38" height="36">
+              <use href="${icons}#icon-book-shops-logo" width="38" height="36"></use>
             </svg></a>
           </li>
             </div>
