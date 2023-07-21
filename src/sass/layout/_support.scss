@@ -1,5 +1,5 @@
 .section-support {
-  overflow: hidden; 
+ padding-top: 86px;
 }
 
 .section-support > .container {
@@ -37,8 +37,6 @@
 .img-support {
   stroke: $light-color;
   margin-left: 12px;
-}
-.support-link-img {
 }
 
 .charity-logos {
@@ -88,24 +86,18 @@
 
 @media screen and (max-width: 767px) {
   .section-support > .container {
-    margin-top: 40px;
-    margin-bottom: 40px;
     max-width: 335px;
     min-height: 352px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .section-support > .container {
-    margin-top: 40px;
-    margin-bottom: 40px;
+  
     min-height: 472px; 
   }
 }
-
-
 @media screen and (min-width: 1440px) {
   .section-support > .container {
-    margin-bottom: 86px;
     max-width: 356px; 
     min-height: 490px; 
 }
