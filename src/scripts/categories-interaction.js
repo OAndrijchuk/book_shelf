@@ -45,7 +45,10 @@ function createCategogiesMarkup(listMap) {
   asideList.insertAdjacentHTML('beforeend', listMap);
 }
 
-function onCategoryClick({ target }) {
+function onCategoryClick(event) {
+  event.preventDefault();
+
+  const { target } = event;
   if (!target.classList.contains('aside-link')) {
     return;
   }
@@ -105,4 +108,10 @@ function createCardMarkup(listMap, searchQuery) {
   <h1 class="books-section-title">${highlightedQuery}</h1>
   <ul class="card-list">${listMap}</ul>
   </div>`;
+
+  container.scrollIntoView({
+    block: 'start',
+    inline: 'nearest',
+    behavior: 'smooth',
+  });
 }

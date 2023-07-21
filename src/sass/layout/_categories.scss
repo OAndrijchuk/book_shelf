@@ -37,14 +37,6 @@
 }
 
 /* Categories */
-.activ-name {
-  color: $accent-color;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.36px;
-  text-transform: uppercase;
-}
 
 .categories-list {
   width: 100%;
@@ -91,12 +83,16 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  height: 228px;
+  height: 186px;
   overflow-y: scroll;
 
   @media screen and (min-width: 768px) {
     gap: 32px;
-    height: 472px;
+    height: 600px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    height: 416px;
   }
 }
 
@@ -124,10 +120,7 @@
 
 .activ-name {
   color: $accent-color;
-  font-size: 18px;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: -0.36px;
   text-transform: uppercase;
 }
 
