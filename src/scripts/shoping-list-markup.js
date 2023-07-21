@@ -18,45 +18,38 @@ export function createBookMarkup(object) {
       indie_bound,
     ],
   } = object;
-  // console.log(amazon.url);
   const markupOfBook = ` 
-       <li data-id="${_id}">
-      <div class="shopping-list-book-item">
+  <li data-id="${_id}" class="li-item">
+    <div class="shopping-list-book-item">
       <img
         class="shopping-list-book-img"
         src="${book_image}"
         alt="Image of ${title}"
       />
-       <div class="shopping-list-book-text">
-
-      <h2 class="shopping-list-book-title">${title}</h2>
-      <p class="shopping-list-book-category">${list_name}</p>
-
-      <p class="shopping-list-book-description">${description || 'Description is empty'}</p>
-      <p class="shopping-list-book-author">${author}</p>
-      
-       <div class="shopping-list-book-links">
-
-    <a class="test-link" href="${amazon.url}"><svg width="32" height="11" class="shopping-list-amazon">
-      <use href="${iconsSL}#icon-amazon"></use>
-      </svg></a>
-    <a class="test-link" href="${apple_books.url}"><svg   width="16" height="16" class="shopping-list-apple"><use href="${iconsSL}#icon-apple-books-logo"></use></svg></a>
-    <a class="test-link" href="${bookshop.url}"><svg width="16" height="16" class="shopping-list-bookshop"><use href="${iconsSL}#icon-book-shops-logo"></use></svg></a>
-       </div>
-      <button class="shopping-list-book-btn">
-      <svg class="shopping-list-book-btn-icon" width="16" height="16"><use href="${iconsSL}#icon-trash"></use></svg></button>
+      <div class="shopping-list-book-text">
+        <h2 class="shopping-list-book-title">${title}</h2>
+        <p class="shopping-list-book-category">${list_name}</p>
+        <p class="shopping-list-book-description">${description || 'Description is empty'}</p>
+        <p class="shopping-list-book-author">${author}</p>
+        <div class="shopping-list-book-links">
+          <a class="test-link" href="${amazon.url}">
+            <svg width="32" height="11" class="shopping-list-amazon"><use href="${iconsSL}#icon-amazon"></use></svg>
+          </a>
+          <a class="test-link" href="${apple_books.url}">
+            <svg width="16" height="16" class="shopping-list-apple"><use href="${iconsSL}#icon-apple-books-logo"></use></svg>
+          </a>
+          <a class="test-link" href="${bookshop.url}">
+            <svg width="16" height="16" class="shopping-list-bookshop"><use href="${iconsSL}#icon-book-shops-logo"></use></svg>
+          </a>
+        </div>
+        <button data-id="${_id}" class="shopping-list-book-btn" >
+          <svg class="shopping-list-book-btn-icon" width="16" height="16"><use href="${iconsSL}#icon-trash"></use></svg>
+        </button>
+      </div>
     </div>
-  
-    </div>
-    
-    </li>
-  `;
-  // console.log(markupOfBook);
+  </li>`;
   return markupOfBook;
 }
-// <a href="${amazon.url}"></a>
-//       <a href="${apple_books.url}"></a>
-//       <a href="${bookshop.url}"></a>
 export function createShopingList(arrayOfBooks) {
   let result;
   if (arrayOfBooks.length === 0) {
