@@ -21,7 +21,7 @@ function changeColor() {
 
     event.target.classList.add('activ-name');
     updateScreenWidth();
-    scrollToSecton();
+    scrollToSecton(event);
   });
 }
 
@@ -124,6 +124,7 @@ function createCardMarkup(listMap, searchQuery) {
   // });
 }
 
+//! --------------------
 function scrollToSecton(event) {
   const getSectionId = document.querySelector(
     '#' + event.target.dataset.scroll
