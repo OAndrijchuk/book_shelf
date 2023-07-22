@@ -37,6 +37,12 @@
     .modal-congratulations-text {
         color: rgba(255, 255, 255, 1);
     }
+
+.modal-shop-item:hover,
+.modal-shop-item:focus {
+    scale: 1.15;
+    fill: #4F2EE8;
+}
 }
 
 .modal-open {
@@ -92,7 +98,7 @@
     width: 287px;
     height: 408px;
     border-radius: 8px;
-
+    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.12), 3px 2px 5px rgba(0, 0, 0, 0.14), 3px 6px 5px rgba(0, 0, 0, 0.2);
 }
 
 .is-hidden {
@@ -235,9 +241,9 @@
 
 .modal-shop-item:hover,
 .modal-shop-item:focus {
-    background: url(../images/sprite.svg), lightgray 0px -0.889px / 100% 105.556% no-repeat;
-    mix-blend-mode: luminosity;
-    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+    scale: 1.15;
+    fill: #4F2EE8;
+    pointer-events: visibleFill;
 }
 
 /* ----------------------------375px-------------------------- */
@@ -339,7 +345,3 @@
         letter-spacing: -0.48px;
     }
 }
-
-/* -------------------------------1200px-------------------------------- */
-
-@media screen and (min-width: 1200px) {}
