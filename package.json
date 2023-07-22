@@ -23,7 +23,8 @@
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
     "smooth-scrollbar": "^8.8.4",
-    "smoothscroll-polyfill": "^0.4.4"
+    "smoothscroll-polyfill": "^0.4.4",
+    "swiper": "^10.0.4"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
