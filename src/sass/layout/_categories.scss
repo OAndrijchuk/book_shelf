@@ -39,9 +39,12 @@
 /* Categories */
 .categories-list {
   width: 100%;
+  height: 228px;
+  overflow: hidden;
 
   @media screen and(min-width: 768px) {
     width: 337px;
+    height: 472px;
   }
 }
 
@@ -209,6 +212,10 @@
   }
 }
 
+.cards-link {
+  cursor: default;
+}
+
 .cards-header {
   margin-bottom: 14px;
   border-radius: 8px;
@@ -218,6 +225,7 @@
 .cards-img {
   width: 100%;
   height: 485px;
+  cursor: pointer;
 
   @media screen and (min-width: 768px) {
     height: 316px;
@@ -238,6 +246,7 @@
   line-height: 18px; /* 112.5% */
   letter-spacing: -0.64px;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .cards-author {
@@ -248,4 +257,39 @@
   font-weight: 400;
   line-height: 14px; /* 116.667% */
   letter-spacing: -0.48px;
+}
+
+.card-wrapper {
+  border: none;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transition: transform $anim-tranz-parameters;
+}
+.card-wrapper:hover {
+  transform: scale(1.03);
+}
+
+.card-wrapper:hover .hover-text-card {
+  visibility: visible;
+}
+
+.hover-text-card {
+  width: 100%;
+  color: $dark-color;
+  text-align: center;
+  text-transform: uppercase;
+  visibility: hidden;
+  background-color: $select-el-color;
+  border-radius: 0 0 8px 8px;
+  padding: 26px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.29;
+  z-index: 9;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  pointer-events: none;
 }
