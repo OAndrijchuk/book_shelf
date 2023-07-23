@@ -1,0 +1,86 @@
+.dark {
+  .tui-pagination .tui-is-selected,
+  .tui-pagination strong {
+    background-color: #fff !important;
+    color: #000000 !important;
+  }
+}
+
+.tui-pagination {
+  display: flex !important;
+  justify-content: center;
+  gap: 8px;
+  height: 44px !important;
+  margin: 20px 0 40px 0 !important;
+
+  @media screen and (min-width: 768px) {
+    gap: 10px;
+    margin: 40px 0 40px 0 !important;
+  }
+
+  @media screen and (min-width: 1440px) {
+    margin: 40px 0 40px 400px !important;
+  }
+}
+
+.tui-page-btn {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 10px;
+  width: 38px !important;
+  height: 38px !important;
+  border: 1px solid $dark-color !important;
+  border-radius: 50%;
+  font-family: DM Sans !important;
+  font-size: 18px !important;
+  font-style: normal !important;
+  font-weight: 700 !important;
+  line-height: 22px !important;
+
+  @media screen and (min-width: 768px) {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}
+
+.tui-first {
+  margin-right: -3px !important;
+  background-color: $dark-color;
+
+  @media screen and (min-width: 768px) {
+    margin-right: -2px !important;
+  }
+}
+
+.tui-prev {
+  margin-right: 4px !important;
+  background-color: $dark-color;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 14px !important;
+  }
+}
+
+.tui-last {
+  margin-left: -3px !important;
+  background-color: $select-el-color;
+
+  @media screen and (min-width: 768px) {
+    margin-right: -2px !important;
+  }
+}
+
+.tui-next {
+  margin-left: 4px !important;
+  background-color: $select-el-color;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 14px !important;
+  }
+}
+
+.tui-pagination .tui-is-selected,
+.tui-pagination strong {
+  background-color: #000000 !important;
+}
