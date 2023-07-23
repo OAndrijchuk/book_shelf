@@ -1,5 +1,6 @@
 import { onOpenModalBtnClick } from './modal';
 import { FetchBook } from './api';
+import { addToFierbase } from './registration-modal';
 import icons from '../images/sprite.svg';
 const fetchBook = new FetchBook();
 const modalWrapper = document.querySelector('.modal-wrapper');
@@ -82,12 +83,14 @@ function markapBtn(id) {
     );
     markapBtn(id);
     event.currentTarget.removeEventListener('click', removeBookFromLokalStoreg);
+    addToFierbase();
   }
   function addBookFromLokalStoreg(event) {
     bookList.push(id);
     localStorage.setItem('bookList', JSON.stringify(bookList));
     markapBtn(id);
     event.currentTarget.removeEventListener('click', addBookFromLokalStoreg);
+    addToFierbase();
   }
 }
 

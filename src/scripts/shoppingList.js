@@ -1,6 +1,8 @@
 import './changeTheam';
 import './mobile-menu';
 import './support';
+import './registration-modal';
+import { addToFierbase } from './registration-modal';
 import {
   createBookMarkup,
   createEmptyBackground,
@@ -51,4 +53,5 @@ export function onDeleteClick(event) {
   if (booksInChart.length === 0) {
     container.innerHTML = createEmptyBackground();
   }
+  addToFierbase();
 }
