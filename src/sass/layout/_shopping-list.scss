@@ -151,6 +151,7 @@
 .shopping-list-apple:hover,
 .shopping-list-bookshop:hover {
   transform: scale(1.6);
+  fill: #4f2ee8;
 }
 
 .shopping-list-apple {
@@ -375,9 +376,13 @@
   .shopping-list-amazon,
   .shopping-list-apple {
     fill: #fff;
-    stroke: #fff;
   }
   .shopping-list-bookshop {
     fill: #fff;
+  }
+  .shopping-list-apple:hover,
+  .shopping-list-amazon:hover,
+  .shopping-list-bookshop:hover {
+    fill: #4f2ee8;
   }
 }
