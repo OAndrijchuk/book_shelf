@@ -30,6 +30,7 @@ const authorizationModal = document.querySelector('.registration-backdrop');
 const singUpBtnModal = document.querySelector('.signup-btn');
 const closeBtn = document.querySelector('.registration-close-btn');
 const singUpBtn = [...document.querySelectorAll('.sign-up-btn')];
+const singOutBtn = [...document.querySelectorAll('.sign-out-btn')];
 
 singUpBtn.forEach(el => el.addEventListener('click', onOpenAuthMenu));
 
@@ -48,6 +49,7 @@ if (isAuth) {
     'usersBookList/' + JSON.parse(localStorage.getItem('userAuth'))
   );
   singUpBtn.forEach(el => el.removeEventListener('click', onOpenAuthMenu));
+  singOutBtn.forEach(el => el.addEventListener('click', singOuttt));
 } else {
   singUpBtn.forEach(el => el.addEventListener('click', onOpenAuthMenu));
   onOpenAuthMenu();
@@ -88,10 +90,10 @@ function singUp(event) {
       });
       set(userRef, userData);
       set(bookListRef, JSON.parse(localStorage.getItem('bookList')));
-      setUserInfo();
       document.querySelector('.user-info').classList.remove('is-hidden');
       registrationForm.reset();
-      document.location.reload();
+      setUserInfo();
+      onCloseAuthMenu();
     })
     .catch(error => {
       const errorCode = error.code;
@@ -99,7 +101,6 @@ function singUp(event) {
       console.log(errorMessage);
       console.log(errorCode);
     });
-  onCloseAuthMenu();
 }
 
 function singIn(event) {
@@ -117,12 +118,11 @@ function singIn(event) {
         const data = snapshot.val();
         console.log(data);
         localStorage.setItem('bookList', data);
-        document.location.reload();
-        onCloseAuthMenu();
-        setUserInfo();
         document.querySelector('.user-info').classList.remove('is-hidden');
         registrationForm.reset();
       });
+      setUserInfo();
+      onCloseAuthMenu();
     })
     .catch(error => {
       const errorCode = error.code;
@@ -132,26 +132,28 @@ function singIn(event) {
 }
 
 function onCloseAuthMenu() {
+  document.body.classList.remove('modal-open');
   authorizationModal.classList.add('is-hidden');
   singUpLink.removeEventListener('click', singUpModalMarkup);
   singInLink.removeEventListener('click', singInModalMarkup);
   closeBtn.removeEventListener('click', onCloseAuthMenu);
-  singOutLink.removeEventListener('click', singOuttt);
 }
 function onOpenAuthMenu() {
+  document.body.classList.add('modal-open');
   authorizationModal.classList.remove('is-hidden');
   singUpLink.addEventListener('click', singUpModalMarkup);
   singInLink.addEventListener('click', singInModalMarkup);
   closeBtn.addEventListener('click', onCloseAuthMenu);
-  singOutLink.addEventListener('click', singOuttt);
 }
 
 export function singOuttt() {
   signOut(auth)
     .then(() => {
       console.log('Signed out===>>>');
-      localStorage.removeItem('userAuth');
       userRef = null;
+      localStorage.removeItem('userAuth');
+      localStorage.removeItem('userOption');
+      localStorage.removeItem('bookList');
       document.querySelector('.user-info').classList.add('is-hidden');
       document.location.reload();
     })
@@ -159,27 +161,15 @@ export function singOuttt() {
       console.log(error);
     });
 }
-export function setUserInfo() {
+function setUserInfo() {
   onValue(
     ref(database, 'users/' + JSON.parse(localStorage.getItem('userAuth'))),
     snapshot => {
       const data = snapshot.val();
-      user = JSON.parse(data);
-      // console.log(user);
-      document.querySelector('.mobil-user-name').textContent = user.userName;
-    }
-  );
-}
-function getFierbaseBookList() {
-  return onValue(
-    ref(
-      database,
-      'usersBookList/' + JSON.parse(localStorage.getItem('userAuth'))
-    ),
-    snapshot => {
-      const data = snapshot.val();
-      localStorage.setItem('bookList', JSON.stringify(data));
-      console.log(data);
+      localStorage.setItem('userOption', data);
+      const user = JSON.parse(data);
+      window.setTimeout(() => document.location.reload(), 1000);
+      // document.location.reload();
     }
   );
 }

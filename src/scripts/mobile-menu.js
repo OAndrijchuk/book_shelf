@@ -19,8 +19,17 @@ function showMobileMenu(event) {
 }
 
 if (JSON.parse(localStorage.getItem('userAuth'))) {
+  const user = JSON.parse(localStorage.getItem('userOption'));
+  if (user) {
+    document.querySelector('.mobil-user-name').textContent = user.userName;
+    document.querySelector('.userName').textContent = user.userName;
+  }
+
+  console.log(user);
   const signupBtn = [...document.querySelectorAll('.sign-up-btn')];
+  const singOutBtn = document.querySelector('.sign-out-mobile');
   signupBtn.forEach(el => el.classList.add('visually-hidden'));
+  singOutBtn.classList.remove('visually-hidden');
   document.querySelector('.user-btn').classList.remove('visually-hidden');
 } else {
   document.querySelector('.user-info').classList.add('visually-hidden');

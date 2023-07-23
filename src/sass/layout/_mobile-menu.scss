@@ -29,6 +29,12 @@
         & .sign-up-btn{
             margin-left: 20px !important;
         }
+        & .sign-out-btn {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1;
+        }
 }
 .user-info{
     display: flex;

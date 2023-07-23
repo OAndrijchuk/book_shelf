@@ -66,6 +66,7 @@
     transform: translateY(-50%);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     stroke: $dark-color;
+    // stroke: #fff;
   }  
 
 .registration-modal-input {
@@ -117,6 +118,16 @@
 .registration-inner {
     margin-top: 20px;
     text-align: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.sing-link{
+  font-weight: 600;
+  transition: color $anim-tranz-parameters;
+  &:hover{
+    color: $accent-color;
+  }  
 }
 
 .registration-link {
