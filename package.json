@@ -21,6 +21,7 @@
     "axios": "^1.4.0",
     "lodash": "^4.17.21",
     "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6",
     "smooth-scrollbar": "^8.8.4",
     "smoothscroll-polyfill": "^0.4.4"
   },
