@@ -115,16 +115,17 @@ function singIn(event) {
       localStorage.setItem('userAuth', JSON.stringify(user.uid));
       onValue(bookListRef, snapshot => {
         const data = snapshot.val();
-        localStorage.setItem('bookList', JSON.stringify(data));
         console.log(data);
+        localStorage.setItem('bookList', data);
+        document.location.reload();
       });
       onCloseAuthMenu();
       setUserInfo();
       document.querySelector('.user-info').classList.remove('is-hidden');
       registrationForm.reset();
-      document.location.reload();
+      // document.location.reload();
     })
-    .then()
+    // .then(el => document.location.reload())
     .catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;

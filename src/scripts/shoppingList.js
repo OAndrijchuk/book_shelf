@@ -22,7 +22,7 @@ menuLinks[1].classList.add('activ-page');
 const container = document.querySelector('.cont-section');
 const bookMarkupsArr = [];
 const onShoppingClick = async event => {
-  const booksInChart = JSON.parse(localStorage.getItem('bookList')) || null;
+  const booksInChart = JSON.parse(localStorage.getItem('bookList')) || [];
 
   for (const book of booksInChart) {
     const bookData = await new FetchBook().fetchElement(book);

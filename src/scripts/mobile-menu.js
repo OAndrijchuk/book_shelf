@@ -22,7 +22,6 @@ if (JSON.parse(localStorage.getItem('userAuth'))) {
   const signupBtn = [...document.querySelectorAll('.sign-up-btn')];
   signupBtn.forEach(el => el.classList.add('visually-hidden'));
   document.querySelector('.user-btn').classList.remove('visually-hidden');
-  console.log(signupBtn);
 } else {
   document.querySelector('.user-info').classList.add('visually-hidden');
   console.log('No autorizetion=====>>>>>');
