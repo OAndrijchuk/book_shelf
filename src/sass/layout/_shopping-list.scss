@@ -2,8 +2,6 @@
   display: block;
 }
 
-
-
 .shop-list-empty-container {
   margin: 0 auto;
   display: flex;
@@ -151,6 +149,13 @@
 .shopping-list-amazon {
   width: 32px;
   height: 11px;
+  transition: 250ms;
+}
+.shopping-list-amazon:hover,
+.shopping-list-apple:hover,
+.shopping-list-bookshop:hover {
+  transform: scale(1.6);
+  fill: #4f2ee8;
 }
 
 .shopping-list-apple {
@@ -188,7 +193,8 @@
 
   .shopping-list-container {
     min-width: 704px;
-    min-height: 960px;
+    min-height: 845px;
+    //  min-height: 960px;
   }
 
   .shop-list-empty-container {
@@ -265,17 +271,13 @@
 }
 
 @media screen and (min-width: 1440px) {
-.shopping-list-body {
-  display: grid;
-//     grid-template-areas:
-//       'header header'
-//       'cont-section cont-section';
-
+  .shopping-list-body {
+    display: grid;
   }
-
   .shopping-list-container {
     min-width: 996px;
-    min-height: 1000px;
+    min-height: 845px;
+    // min-height: 1000px;
     padding-top: 0;
   }
   .shopping-list-book-item {
@@ -382,10 +384,14 @@
 
   .shopping-list-amazon,
   .shopping-list-apple {
-    fill: #4f2ee8;
-    stroke: #4f2ee8;
+    fill: #fff;
   }
   .shopping-list-bookshop {
+    fill: #4f2ee8;
+  }
+  .shopping-list-apple:hover,
+  .shopping-list-amazon:hover,
+  .shopping-list-bookshop:hover {
     fill: #4f2ee8;
   }
 }

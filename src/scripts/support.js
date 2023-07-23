@@ -1,13 +1,15 @@
-import img1 from '../images/support/SaveTheChild.png'
-import img2 from '../images/support/Hope.png'
-import img3 from '../images/support/United24.png'
-import img4 from '../images/support/InterMadicalCor.png'
-import img5 from '../images/support/MedecinsSansFron.png'
-import img6 from '../images/support/Razom.png'
-import img7 from '../images/support/ActionAgHunger.png'
-import img8 from '../images/support/WorldVision.png'
-import img9 from '../images/support/SergPritula.png'
+import Swiper from 'swiper';
 
+import 'swiper/swiper-bundle.min.css';
+import img1 from '../images/support/SaveTheChild.png';
+import img2 from '../images/support/Hope.png';
+import img3 from '../images/support/United24.png';
+import img4 from '../images/support/InterMadicalCor.png';
+import img5 from '../images/support/MedecinsSansFron.png';
+import img6 from '../images/support/Razom.png';
+import img7 from '../images/support/ActionAgHunger.png';
+import img8 from '../images/support/WorldVision.png';
+import img9 from '../images/support/SergPritula.png';
 const charities = [
   {
     title: 'Save the Children',
@@ -55,45 +57,41 @@ const charities = [
     img: img9,
   },
 ];
-
-const charityLogosContainer = document.querySelector('.charity-logos');
+const charityLogosContainer = document.querySelector('.swiper-wrapper');
 const expandBtn = document.querySelector('.support-button');
-const iconButtonAngle = document.querySelector('.icon-button-angle');
-const supportContainer = document.querySelector('.support-container');
-
+// const iconButtonAngle = document.querySelector('.icon-button-angle');
+// const supportContainer = document.querySelector('.support-container');
 function createCharityLogo(charity, index) {
   const formattedIndex = (index + 1).toString().padStart(2, '0');
-
-  return `<li class="support-link">
+  return `<li class="support-link swiper-slide">           
+            <a class="support-link-url" href="${charity.url}" target="_blank">
             <span class="logo-index" >${formattedIndex}</span>
-            <a class="support-link-url" href="${charity.url}" target="_blank"> 
-              <img class="support-link-img" src="${charity.img}" alt="${charity.title}"/>
+            <img class="support-link-img" src="${charity.img}" alt="${charity.title}"/>
             </a>
-          </li>`;
+          </li>
+      `;
 }
-
 function displayAllCharities() {
   charityLogosContainer.innerHTML = charities.map(createCharityLogo).join('');
 }
-
-expandBtn.addEventListener('click', expandSection);
-
-function expandSection() {
-  const isExpanded = supportContainer.classList.contains('expanded');
-
-  if (!isExpanded) {
-    supportContainer.style.height = 'auto';
-    supportContainer.classList.add('expanded');
-    iconButtonAngle.style.transform = 'rotate(-180deg)';
-  } else {
-    supportContainer.style.height = '0';
-    supportContainer.classList.remove('expanded');
-    iconButtonAngle.style.transform = 'rotate(0deg)';
-  }
-}
-
-supportContainer.style.height = '0';
-supportContainer.classList.remove('expanded');
-
-
 displayAllCharities();
+const swiper = new Swiper('.swiper-container', {
+  direction: 'vertical',
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 6,
+  //   },
+  //   0: {
+  //     slidesPerView: 4,
+  //   },
+  // },
+  slidesPerView: 4,
+  loop: true,
+  autoplay: {
+    delay: 1000,
+  },
+});
+
+expandBtn.addEventListener('click', () => {
+  swiper.slideNext();
+});

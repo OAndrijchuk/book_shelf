@@ -1,5 +1,5 @@
 .section-support {
- padding-top: 86px;
+  padding-top: 40px;
 }
 
 .section-support > .container {
@@ -16,7 +16,6 @@
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
   flex-shrink: 0;
   border-radius: 16px;
-  
 }
 
 .header-support {
@@ -24,6 +23,7 @@
   display: flex;
   align-items: center;
   text-transform: capitalize;
+  margin-bottom: 40px;
 }
 .logo-index {
   color: $light-color;
@@ -35,6 +35,7 @@
   letter-spacing: -0.56px;
 }
 .img-support {
+  display: block;
   stroke: $light-color;
   margin-left: 12px;
 }
@@ -51,7 +52,9 @@
 }
 
 .support-link-url {
-  margin: 10px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
   .support-link-img {
     filter: brightness(0) invert(1);
     transition: transform 0.3s ease;
@@ -65,8 +68,8 @@
 }
 .support-button {
   position: absolute;
-  left: 50%;
   bottom: 20px;
+  left: 50%;
   height: 38px;
   width: 38px;
   display: block;
@@ -81,7 +84,7 @@
 
 .icon-button-angle {
   fill: $btn-color;
-  transition: transform 0.3s ease; 
+  transition: transform 0.3s ease;
 }
 
 @media screen and (max-width: 767px) {
@@ -89,15 +92,23 @@
     max-width: 335px;
     min-height: 352px;
   }
-    .shopping-list-body {
-      .section-support {
-        display: none;
-      }
+  .shopping-list-body {
+    .section-support {
+      display: none;
     }
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .section-support > .container {
-    min-height: 472px; 
+    min-height: 472px;
+  }
+  .swiper-backface-hidden {
+    height: 400px;
+  }
+  .shopping-list-body {
+    .section-support {
+      display: none;
+    }
   }
 .shopping-list-body {
   .section-support {
@@ -107,14 +118,37 @@
 
 }
 @media screen and (min-width: 1440px) {
-  .section-support > .container {
-    max-width: 356px; 
-    min-height: 490px; 
-}
-.shopping-list-body {
   .section-support {
-    padding: 0;
+    padding-top: 86px;
+  }
+  .section-support > .container {
+    max-width: 356px;
+    min-height: 490px;
+  }
+  .swiper-backface-hidden {
+    height: 418px;
+  }
+  .shopping-list-body {
+    .section-support {
+      padding: 0;
+    }
   }
 }
+.swiper {
+  position: static;
+  width: 100%;
+  height: 100%;
+}
+.swiper-wrapper {
+  position: static;
+  flex-direction: column;
+}
 
+.swiper-backface-hidden {
+  height: 280px;
+  display: flex;
+}
+
+.swiper-wrapper > .swiper-slide {
+  display: flex;
 }
