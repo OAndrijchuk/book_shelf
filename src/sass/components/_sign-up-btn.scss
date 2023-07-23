@@ -10,10 +10,59 @@
     border-radius: 36px;
     font-weight: 700;
     color: white;
+    position: relative;
 }
 
 .right-arrow-icon {
-    
+
     align-items: baseline;
     stroke: $select-el-color;
+    fill: white;
+}
+
+
+.sign-out-btn {
+    display: flex;
+    align-items: center;
+    // justify-content: space-around;
+    justify-content: space-between;
+    background: white;
+    width: 184px;
+    height: 45px;
+    padding: 0 14px;
+    border-radius: 18px;
+    font-weight: 700;
+    color: $btn-color;
+    border: 1px solid black;
+    position: absolute;
+}
+
+.hidden-button {
+    display: none;
+    margin-top: 10px;
+    // background-color: #ff4500;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.user-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $btn-color;
+    width: 184px;
+    height: 45px;
+    padding: 0 14px;
+    border-radius: 36px;
+    font-weight: 700;
+    color: white;
+    position: relative;
+}
+
+.hide-user {
+    display: none;
 }
