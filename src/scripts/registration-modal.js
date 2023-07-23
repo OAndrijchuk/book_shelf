@@ -29,9 +29,10 @@ const registrationForm = document.querySelector('.registration-modal-form');
 const authorizationModal = document.querySelector('.registration-backdrop');
 const singUpBtnModal = document.querySelector('.signup-btn');
 const closeBtn = document.querySelector('.registration-close-btn');
-const singUpBtnHeader = document.querySelector('.sign-up-btn');
+const singUpBtn = [...document.querySelectorAll('.sign-up-btn')];
 
-singUpBtnHeader.addEventListener('click', onOpenAuthMenu);
+singUpBtn.forEach(el => el.addEventListener('click', onOpenAuthMenu));
+
 registrationForm.addEventListener('submit', singUp);
 
 let isAuth = JSON.parse(localStorage.getItem('userAuth'));
@@ -46,12 +47,9 @@ if (isAuth) {
     database,
     'usersBookList/' + JSON.parse(localStorage.getItem('userAuth'))
   );
-  // document.querySelector('user-info').classList.remove('is-hidden');
-  // document.querySelector('sign-up-btn').classList.add('is-hidden');
+  singUpBtn.forEach(el => el.removeEventListener('click', onOpenAuthMenu));
 } else {
-  // document.querySelector('user-info').classList.add('is-hidden');
-  // document.querySelector('sign-up-btn').classList.remove('is-hidden');
-
+  singUpBtn.forEach(el => el.addEventListener('click', onOpenAuthMenu));
   onOpenAuthMenu();
 }
 
@@ -93,6 +91,7 @@ function singUp(event) {
       setUserInfo();
       document.querySelector('.user-info').classList.remove('is-hidden');
       registrationForm.reset();
+      document.location.reload();
     })
     .catch(error => {
       const errorCode = error.code;
@@ -123,6 +122,7 @@ function singIn(event) {
       setUserInfo();
       document.querySelector('.user-info').classList.remove('is-hidden');
       registrationForm.reset();
+      document.location.reload();
     })
     .then()
     .catch(error => {
@@ -147,13 +147,14 @@ function onOpenAuthMenu() {
   singOutLink.addEventListener('click', singOuttt);
 }
 
-function singOuttt() {
+export function singOuttt() {
   signOut(auth)
     .then(() => {
       console.log('Signed out===>>>');
       localStorage.removeItem('userAuth');
       userRef = null;
       document.querySelector('.user-info').classList.add('is-hidden');
+      document.location.reload();
     })
     .catch(error => {
       console.log(error);

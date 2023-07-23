@@ -34,7 +34,6 @@
     display: flex;
     align-items: center;
     gap: 9px;
-    margin-bottom: 126px;
     margin-left: 20px;
 }
 .mobil-user-img{
@@ -62,6 +61,7 @@
     width: 373px;
     display: flex;
     justify-content: center;
+    margin-top: 126px;
 }
 
 .mob-menu {
@@ -116,10 +116,10 @@
 
 
 @media screen and (min-width: 768px) {
-
+// .mobile-menu-nav
     .burger-menu-svg,
-    .close-menu-icon,
-    .mobile-menu-nav {
+    .close-menu-icon
+     {
         display: none;
     }
 }
