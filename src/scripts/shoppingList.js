@@ -9,6 +9,7 @@ import {
 import { FetchBook } from './api';
 import { Options } from 'smooth-scrollbar/options';
 
+const buttonBag = document.querySelector('.shopping-list-book-btn')
 const mobileLinks = document.querySelectorAll('.mob-menu-link');
 mobileLinks.forEach(el => el.classList.remove('activ-page'));
 mobileLinks[1].classList.add('activ-page');
@@ -109,6 +110,7 @@ export function onDeleteClick(event) {
     booksInChart.splice(bookIdx, 1);
     localStorage.setItem('bookList', JSON.stringify(booksInChart));
     allLiEl.find(el => el.dataset.id === deletingBookId).remove();
+    Notiflix.Notify.info('Book successfully deleted from your chart');
   }
   if (booksInChart.length === 0) {
     container.innerHTML = createEmptyBackground();
