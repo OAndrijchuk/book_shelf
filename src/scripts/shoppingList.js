@@ -1,6 +1,9 @@
 import './changeTheam';
 import './mobile-menu';
+import './authLogic';
 import './support';
+import './registration-modal';
+import { addToFierbase } from './registration-modal';
 import {
   createBookMarkup,
   createEmptyBackground,
@@ -58,7 +61,7 @@ const options = {
 const pagination = new Pagination(containerTui, options);
 
 const onShoppingClick = async event => {
-  const booksInChart = JSON.parse(localStorage.getItem('bookList')) || null;
+  const booksInChart = JSON.parse(localStorage.getItem('bookList')) || [];
 
   const booksArrCopy = [...booksInChart];
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -122,4 +125,6 @@ export function onDeleteClick(event) {
   }
 
   onShoppingClick();
+  addToFierbase();
+
 }

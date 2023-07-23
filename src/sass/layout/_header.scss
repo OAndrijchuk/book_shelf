@@ -90,15 +90,21 @@
 .sign-up-block {
   display: none;
 }
+.sign-up-btn{
+    border: 1.5px solid #111;
+}
 
 .header-menu {
   display: none;
 }
 
 @media screen and (min-width: 768px) {
-  .header-container {
-    min-width: 768px;
-  }
+    .header {
+            max-height: 72px;
+        }
+    .header-container {
+        min-width: 768px;
+        }
 
   .sign-up-block {
     display: block;

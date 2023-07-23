@@ -14,7 +14,7 @@
           id="user-name"
           class="registration-modal-input"
           type="text"
-          name="user-name"
+          name="userName"
           placeholder="Name"
         />
       </div>
@@ -28,9 +28,10 @@
             class="registration-modal-input"
             type="text"
             placeholder="Email"
+            name="userEmail"
           />
           <svg class="registration-modal-icon" width="28" height="28">
-            <use href="./images/sprite.svg#icon-close_Icon"></use>
+            <use href="./images/sprite.svg#icon-mail"></use>
           </svg>
         </div>
       </div>
@@ -43,21 +44,20 @@
             id="user-password"
             class="registration-modal-input"
             type="text"
-            name="user-password"
+            name="userPassword"
             placeholder="Password"
           />
           <svg class="registration-modal-icon" width="28" height="28">
-            <use href="./images/sprite.svg#icon-close_Icon"></use>
+            <use href="./images/sprite.svg#icon-lock"></use>
           </svg>
         </div>
       </div>
+      <button class="signup-btn" type="submit">Sign up</button>
     </form>
 
-    <button class="signup-btn" type="button">Sign up</button>
-
     <div class="registration-inner">
-      <a class="registration-link" href="#">Sing up</a>
-      <a class="registration-link" href="#">Sing in</a>
+      <button type="button" class="sing-link sing-up-link">Sing up</button>
+      <button type="button" class="sing-link sing-in-link">Sing in</button>
     </div>
   </div>
 </div>

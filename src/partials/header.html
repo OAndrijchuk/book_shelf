@@ -50,9 +50,31 @@
           </svg>
         </div>
       </button>
+
       <div class="sign-up-block">
+        <!-- <button type="button" class="sign-up-btn"> -->
         <button type="button" class="sign-up-btn">
           <span class="sign-up-btn-text">Sign up</span>
+          <svg class="right-arrow-icon" width="23" height="26">
+            <use href="./images/sprite.svg#icon-right_arrow"></use>
+          </svg>
+        </button>
+
+        <button type="button" class="user-btn visually-hidden">
+          <img
+            width="30"
+            height="30"
+            src="https://img.icons8.com/?size=512&id=63980&format=png"
+            alt="icn"
+          />
+          <span class="userName">Stephan</span>
+          <svg class="right-arrow-icon" width="23" height="36">
+            <use href="./images/sprite.svg#icon-triangle"></use>
+          </svg>
+        </button>
+
+        <button type="button" class="sign-out-btn sign-out-des visually-hidden">
+          <span class="sign-up-btn-text">Log out</span>
           <svg class="right-arrow-icon" width="20" height="20">
             <use href="./images/sprite.svg#icon-right_arrow"></use>
           </svg>
@@ -64,6 +86,22 @@
 
 <!-- Mobile menu -->
 <div class="mobile-menu-nav">
+  <button type="button" class="sign-up-btn">
+    <span class="sign-up-btn-text">Sign up</span>
+    <svg class="right-arrow-icon" width="20" height="20">
+      <use href="./images/sprite.svg#icon-right_arrow"></use>
+    </svg>
+  </button>
+  <div class="user-info">
+    <img
+      class="mobil-user-img"
+      src="./images/user_plaseholder.jpg"
+      alt="user photo"
+      width="37"
+      height="37"
+    />
+    <p class="mobil-user-name">Olga-Olga</p>
+  </div>
   <div class="mob-menu-wrapper">
     <ul class="mob-menu list">
       <li class="mob-menu-item">
@@ -79,6 +117,12 @@
       </li>
     </ul>
   </div>
+  <button type="button" class="sign-out-btn sign-out-mobile visually-hidden">
+    <span class="sign-up-btn-text">Log out</span>
+    <svg class="right-arrow-icon" width="20" height="20">
+      <use href="./images/sprite.svg#icon-right_arrow"></use>
+    </svg>
+  </button>
   <div class="img"></div>
 </div>
 <!-- End Menu -->
