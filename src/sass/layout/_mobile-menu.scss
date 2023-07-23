@@ -17,7 +17,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%,-100%);
-    padding-top: 183px;
+    padding-top: 84px;
     height: 100vh;
     max-width: 373px;
     background: radial-gradient(189.32% 190.93% at 59.76% -23.42%, #4F2EE8 18.03%, #FFF 100%);
@@ -25,8 +25,30 @@
     flex-direction: column;
     z-index: 1;
     transition: transform $anim-tranz-parameters;
-}
 
+        & .sign-up-btn{
+            margin-left: 20px !important;
+        }
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 126px;
+    margin-left: 20px;
+}
+.mobil-user-img{
+    border-radius: 50%;
+}
+.mobil-user-name{
+    color: #FFF;
+    font-family: DM Sans;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.44px;
+}
 
 .img {
     background-image: url('../images/mobile.png');

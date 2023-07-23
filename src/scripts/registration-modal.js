@@ -35,13 +35,23 @@ singUpBtnHeader.addEventListener('click', onOpenAuthMenu);
 registrationForm.addEventListener('submit', singUp);
 
 let isAuth = JSON.parse(localStorage.getItem('userAuth'));
+let bookListRef;
 let userRef;
 if (isAuth) {
   userRef = ref(
     database,
     'users/' + JSON.parse(localStorage.getItem('userAuth'))
   );
+  bookListRef = ref(
+    database,
+    'usersBookList/' + JSON.parse(localStorage.getItem('userAuth'))
+  );
+  // document.querySelector('user-info').classList.remove('is-hidden');
+  // document.querySelector('sign-up-btn').classList.add('is-hidden');
 } else {
+  // document.querySelector('user-info').classList.add('is-hidden');
+  // document.querySelector('sign-up-btn').classList.remove('is-hidden');
+
   onOpenAuthMenu();
 }
 
@@ -72,12 +82,17 @@ function singUp(event) {
       const user = userCredential.user;
       localStorage.setItem('userAuth', JSON.stringify(user.uid));
       userRef = ref(database, 'users/' + user.uid);
-      set(userRef, {
-        userName: userName,
-        userEmail: userEmail,
-        userPhoto: '',
-        bookList: JSON.parse(localStorage.getItem('bookList')),
+      bookListRef = ref(database, 'usersBookList/' + user.uid);
+      const userData = JSON.stringify({
+        userName: userName.value,
+        userEmail: userEmail.value,
+        userPhoto: './somPhoto/',
       });
+      set(userRef, userData);
+      set(bookListRef, JSON.parse(localStorage.getItem('bookList')));
+      setUserInfo();
+      document.querySelector('.user-info').classList.remove('is-hidden');
+      registrationForm.reset();
     })
     .catch(error => {
       const errorCode = error.code;
@@ -97,15 +112,19 @@ function singIn(event) {
     .then(userCredential => {
       console.log('Signed in===>>>');
       const user = userCredential.user;
-      userRef = ref(database, 'users/' + user.uid);
+      bookListRef = ref(database, 'usersBookList/' + user.uid);
       localStorage.setItem('userAuth', JSON.stringify(user.uid));
-      onValue(userRef, snapshot => {
+      onValue(bookListRef, snapshot => {
         const data = snapshot.val();
         localStorage.setItem('bookList', JSON.stringify(data));
         console.log(data);
       });
       onCloseAuthMenu();
+      setUserInfo();
+      document.querySelector('.user-info').classList.remove('is-hidden');
+      registrationForm.reset();
     })
+    .then()
     .catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -128,27 +147,44 @@ function onOpenAuthMenu() {
   singOutLink.addEventListener('click', singOuttt);
 }
 
-// window.addEventListener('storage', function (e) {
-//   console.log(isAuth);
-//   const cartDataFromLocalStorage = JSON.parse(localStorage.getItem('bookList'));
-//   set(userRef, cartDataFromLocalStorage);
-//   console.log(cartDataFromLocalStorage);
-//   console.log(isAuth);
-// });
-
 function singOuttt() {
   signOut(auth)
     .then(() => {
       console.log('Signed out===>>>');
       localStorage.removeItem('userAuth');
       userRef = null;
+      document.querySelector('.user-info').classList.add('is-hidden');
     })
     .catch(error => {
       console.log(error);
     });
 }
+export function setUserInfo() {
+  onValue(
+    ref(database, 'users/' + JSON.parse(localStorage.getItem('userAuth'))),
+    snapshot => {
+      const data = snapshot.val();
+      user = JSON.parse(data);
+      // console.log(user);
+      document.querySelector('.mobil-user-name').textContent = user.userName;
+    }
+  );
+}
+function getFierbaseBookList() {
+  return onValue(
+    ref(
+      database,
+      'usersBookList/' + JSON.parse(localStorage.getItem('userAuth'))
+    ),
+    snapshot => {
+      const data = snapshot.val();
+      localStorage.setItem('bookList', JSON.stringify(data));
+      console.log(data);
+    }
+  );
+}
 
 export function addToFierbase() {
-  const cartDataFromLocalStorage = JSON.parse(localStorage.getItem('bookList'));
-  set(userRef, cartDataFromLocalStorage);
+  const cartDataFromLocalStorage = localStorage.getItem('bookList');
+  set(bookListRef, cartDataFromLocalStorage);
 }
