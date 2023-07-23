@@ -1,5 +1,6 @@
 import './changeTheam';
 import './mobile-menu';
+import './authLogic';
 import './support';
 import './registration-modal';
 import { addToFierbase } from './registration-modal';
