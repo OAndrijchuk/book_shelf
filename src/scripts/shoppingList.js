@@ -7,6 +7,7 @@ import {
   createShopingList,
 } from './shoping-list-markup';
 import { FetchBook } from './api';
+import Notiflix from 'notiflix';
 
 const mobileLinks = document.querySelectorAll('.mob-menu-link');
 mobileLinks.forEach(el => el.classList.remove('activ-page'));
@@ -51,4 +52,5 @@ export function onDeleteClick(event) {
   if (booksInChart.length === 0) {
     container.innerHTML = createEmptyBackground();
   }
+  Notiflix.Notify.info('Book successfully deleted from your chart');
 }

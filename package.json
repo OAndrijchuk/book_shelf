@@ -22,6 +22,7 @@
     "lodash": "^4.17.21",
     "lodash.throttle": "^4.1.1",
     "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6",
     "smooth-scrollbar": "^8.8.4",
     "smoothscroll-polyfill": "^0.4.4",
     "swiper": "^10.0.4"
