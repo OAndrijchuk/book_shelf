@@ -118,14 +118,12 @@ function singIn(event) {
         console.log(data);
         localStorage.setItem('bookList', data);
         document.location.reload();
+        onCloseAuthMenu();
+        setUserInfo();
+        document.querySelector('.user-info').classList.remove('is-hidden');
+        registrationForm.reset();
       });
-      onCloseAuthMenu();
-      setUserInfo();
-      document.querySelector('.user-info').classList.remove('is-hidden');
-      registrationForm.reset();
-      // document.location.reload();
     })
-    // .then(el => document.location.reload())
     .catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;
