@@ -4,7 +4,8 @@
     grid-template-areas:
       'header header'
       'aside-section support'
-      'cont-section  cont-section';
+      'cont-section  cont-section'
+      'tui-pagination tui-pagination';
     justify-content: center;
   }
 
@@ -20,6 +21,9 @@
   .cont-section {
     grid-area: cont-section;
   }
+  .tui-pagination {
+    grid-area: tui-pagination;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -30,7 +34,8 @@
       'aside-section cont-section'
       'support cont-section'
       '. cont-section'
-      '. cont-section';
+      '. cont-section'
+      'tui-pagination tui-pagination';
   }
   .header {
     grid-area: header;
@@ -44,5 +49,8 @@
   .cont-section {
     grid-area: cont-section;
     min-width: 996px;
+  }
+  .tui-pagination {
+    grid-area: tui-pagination;
   }
 }

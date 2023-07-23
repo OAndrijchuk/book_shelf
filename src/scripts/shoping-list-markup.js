@@ -34,19 +34,13 @@ export function createBookMarkup(object) {
         }</p>
         <p class="shopping-list-book-author">${author}</p>
         <div class="shopping-list-book-links">
-          <a class="test-link" href="${
-            amazon.url
-          }" target="_blank" rel="nofollow noopener">
+          <a class="test-link" href="${amazon.url}">
             <svg width="32" height="11" class="shopping-list-amazon"><use href="${iconsSL}#icon-amazon"></use></svg>
           </a>
-          <a class="test-link" href="${
-            apple_books.url
-          }" target="_blank" rel="nofollow noopener">
+          <a class="test-link" href="${apple_books.url}">
             <svg width="16" height="16" class="shopping-list-apple"><use href="${iconsSL}#icon-apple-books-logo"></use></svg>
           </a>
-          <a class="test-link" href="${
-            bookshop.url
-          }" target="_blank" rel="nofollow noopener">
+          <a class="test-link" href="${bookshop.url}">
             <svg width="16" height="16" class="shopping-list-bookshop"><use href="${iconsSL}#icon-book-shops-logo"></use></svg>
           </a>
         </div>
@@ -58,6 +52,7 @@ export function createBookMarkup(object) {
   </li>`;
   return markupOfBook;
 }
+
 export function createShopingList(arrayOfBooks) {
   let result;
   if (arrayOfBooks.length === 0) {

@@ -57,9 +57,9 @@
   margin-bottom: 20px;
   transition: 100ms ease-in-out;
 }
-// .shopping-list-book-item:hover {
-//   transform: scale(1.01);
-// }
+.shopping-list-book-item:hover {
+  transform: scale(1.01);
+}
 
 .shopping-list-book-img {
   width: 100px;
@@ -160,13 +160,11 @@
 .shopping-list-apple {
   width: 16px;
   height: 16px;
-  transition: 250ms;
 }
 
 .shopping-list-bookshop {
   width: 16px;
   height: 16px;
-  transition: 250ms;
 }
 
 .shopping-list-book-btn {
@@ -193,7 +191,8 @@
 @media screen and (min-width: 768px) {
   .shopping-list-container {
     min-width: 704px;
-    min-height: 960px;
+    min-height: 845px;
+    //  min-height: 960px;
   }
 
   .shop-list-empty-container {
@@ -274,8 +273,9 @@
     display: grid;
   }
   .shopping-list-container {
-    min-width: 1044px;
-    min-height: 1000px;
+    min-width: 996px;
+    min-height: 845px;
+    // min-height: 1000px;
     padding-top: 0;
   }
   .shopping-list-book-item {
@@ -385,7 +385,7 @@
     fill: #fff;
   }
   .shopping-list-bookshop {
-    fill: #fff;
+    fill: #4f2ee8;
   }
   .shopping-list-apple:hover,
   .shopping-list-amazon:hover,
