@@ -127,12 +127,7 @@
   height: 280px;
   display: flex;
 }
-.swiper-vertical > .swiper-scrollbar {
-  background: $select-el-color;
-}
+
 .swiper-wrapper > .swiper-slide {
   display: flex;
-}
-.swiper-scrollbar-drag {
-  width: 10px;
 }
