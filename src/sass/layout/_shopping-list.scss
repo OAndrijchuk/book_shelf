@@ -272,12 +272,13 @@
   .shopping-list-body {
     display: grid;
   }
+
   .shopping-list-container {
     min-width: 996px;
     min-height: 845px;
     // min-height: 1000px;
-    padding-top: 0;
   }
+
   .shopping-list-book-item {
     display: flex;
     padding: 30px 24px;
