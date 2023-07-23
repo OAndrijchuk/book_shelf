@@ -1,131 +1,141 @@
-.activ-page{
-    background: $select-el-color;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    color: $dark-color;
+.header {
+  max-height: 64px;
+}
+.activ-page {
+  background: $select-el-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: $dark-color;
 }
 
-.header-container{
-    border: 2px solid black;
-    border-radius: 0 0 8px 8px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 72px;
-    padding: 18px 20px;
-    max-width: 375px;
-    position: relative;
-    z-index: 2;
-    background-color: $light-color;
-    }
-
-.nav-container{
-    display: flex;
-    align-items: center;
-    gap: 40px;
+.header-container {
+  border: 2px solid black;
+  border-radius: 0 0 8px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 72px;
+  padding: 18px 20px;
+  max-width: 375px;
+  position: relative;
+  z-index: 2;
+  background-color: $light-color;
 }
-.navigation{
-    display: flex;
-    align-items: center;
-    gap: 76px;
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 76px;
 }
 .logo {
-    width: 109px;
-    height: 28px;
-    // margin-right: 40px;
+  width: 109px;
+  height: 28px;
+  // margin-right: 40px;
 }
-.logo-link{
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
-.logo-text{
-    fill: currentColor;
+.logo-text {
+  fill: currentColor;
 }
-.menu{
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
 }
-.menu-link{
-    display: flex;
-    align-items: center;
-    padding: 8px 16px;
-    text-transform:uppercase;
-    font-size: 14px;
-    font-style: normal;
-    line-height: 1.29;
-    letter-spacing: -0.56px;
-    border-radius: 36px;
-    transition: color $anim-tranz-parameters;
-    &:hover,
-    &:focus{
-       color: $accent-color;
-    }
+.menu-link {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: -0.56px;
+  border-radius: 36px;
+  transition: color $anim-tranz-parameters;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
-.shopping-list-icon{
-    fill: currentColor;
+.shopping-list-icon {
+  fill: currentColor;
 }
-.shopping-link{
-    display: flex;
-    gap: 4px;
+.shopping-link {
+  display: flex;
+  gap: 4px;
 }
 .sign-up-container {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .user-settings {
-    display: flex;
-    gap: 24px;
-    align-items: center;
+  display: flex;
+  gap: 24px;
+  align-items: center;
 }
 
 .sign-up-block {
-    display: none;
+  display: none;
+}
+.sign-up-btn{
+    border: 1.5px solid #111;
 }
 
 .header-menu {
-    display: none;
-    }
+  display: none;
+}
 
 @media screen and (min-width: 768px) {
+    .header {
+            max-height: 72px;
+        }
     .header-container {
         min-width: 768px;
         }
 
-    .sign-up-block {
-        display: block;
-    }
+  .sign-up-block {
+    display: block;
+  }
 
-    .header-menu {
-        display: block;
-    }
-    .nav-container {
-        gap: 40px;
-    }
-    .header-container {
-        padding: 14px 32px;
-     }
-
+  .header-menu {
+    display: block;
+  }
+  .nav-container {
+    gap: 40px;
+  }
+  .header-container {
+    padding: 14px 32px;
+  }
+  .header {
+    max-height: 72px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-.header-container {
+  .header-container {
     padding: 14px 24px;
     min-width: 1440px;
-}
-.nav-container {
+  }
+  .nav-container {
     gap: 76px;
-}
+  }
 }
 
-.dark{
-    .header-container {
-            border: 2px solid white;
-            
-        }
+.dark {
+  .header-container {
+    border: 2px solid white;
+  }
 }

@@ -1,3 +1,5 @@
+import './authorization';
+import './registration-modal';
 import './categories-interaction';
 import './best-books';
 import './support';
@@ -7,3 +9,4 @@ import './modal-markup';
 import './header';
 import './mobile-menu';
 import './scroll-up-btn';
+import './authLogic';

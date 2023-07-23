@@ -29,7 +29,9 @@ export function createBookMarkup(object) {
       <div class="shopping-list-book-text">
         <h2 class="shopping-list-book-title">${title}</h2>
         <p class="shopping-list-book-category">${list_name}</p>
-        <p class="shopping-list-book-description">${description || 'Description is empty'}</p>
+        <p class="shopping-list-book-description">${
+          description || 'Description is empty'
+        }</p>
         <p class="shopping-list-book-author">${author}</p>
         <div class="shopping-list-book-links">
           <a class="test-link" href="${amazon.url}">
@@ -50,6 +52,7 @@ export function createBookMarkup(object) {
   </li>`;
   return markupOfBook;
 }
+
 export function createShopingList(arrayOfBooks) {
   let result;
   if (arrayOfBooks.length === 0) {

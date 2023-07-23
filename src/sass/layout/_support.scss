@@ -92,6 +92,11 @@
     max-width: 335px;
     min-height: 352px;
   }
+  .shopping-list-body {
+    .section-support {
+      display: none;
+    }
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .section-support > .container {
@@ -100,6 +105,17 @@
   .swiper-backface-hidden {
     height: 400px;
   }
+  .shopping-list-body {
+    .section-support {
+      display: none;
+    }
+  }
+.shopping-list-body {
+  .section-support {
+    display: none;
+  }
+}
+
 }
 @media screen and (min-width: 1440px) {
   .section-support {
@@ -111,6 +127,11 @@
   }
   .swiper-backface-hidden {
     height: 418px;
+  }
+  .shopping-list-body {
+    .section-support {
+      padding: 0;
+    }
   }
 }
 .swiper {
@@ -127,12 +148,7 @@
   height: 280px;
   display: flex;
 }
-.swiper-vertical > .swiper-scrollbar {
-  background: $select-el-color;
-}
+
 .swiper-wrapper > .swiper-slide {
   display: flex;
-}
-.swiper-scrollbar-drag {
-  width: 10px;
 }

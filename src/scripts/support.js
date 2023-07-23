@@ -1,4 +1,5 @@
 import Swiper from 'swiper';
+
 import 'swiper/swiper-bundle.min.css';
 import img1 from '../images/support/SaveTheChild.png';
 import img2 from '../images/support/Hope.png';
@@ -62,13 +63,13 @@ const expandBtn = document.querySelector('.support-button');
 // const supportContainer = document.querySelector('.support-container');
 function createCharityLogo(charity, index) {
   const formattedIndex = (index + 1).toString().padStart(2, '0');
-  return `<li class="support-link swiper-slide">
-            
+  return `<li class="support-link swiper-slide">           
             <a class="support-link-url" href="${charity.url}" target="_blank">
             <span class="logo-index" >${formattedIndex}</span>
             <img class="support-link-img" src="${charity.img}" alt="${charity.title}"/>
             </a>
-          </li>`;
+          </li>
+      `;
 }
 function displayAllCharities() {
   charityLogosContainer.innerHTML = charities.map(createCharityLogo).join('');
@@ -76,25 +77,18 @@ function displayAllCharities() {
 displayAllCharities();
 const swiper = new Swiper('.swiper-container', {
   direction: 'vertical',
-  breakpoints: {
-    0: {
-      slidesPerView: 4,
-    },
-    768: {
-      slidesPerView: 6,
-    },
-  },
-  freeMode: true,
+  // breakpoints: {
+  //   768: {
+  //     slidesPerView: 6,
+  //   },
+  //   0: {
+  //     slidesPerView: 4,
+  //   },
+  // },
+  slidesPerView: 4,
   loop: true,
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    hide: false,
-    draggable: true,
-  },
-  grabCursor: true,
   autoplay: {
     delay: 1000,
-    pauseOnMouseEnter: true,
   },
 });
 
