@@ -29,16 +29,24 @@ export function createBookMarkup(object) {
       <div class="shopping-list-book-text">
         <h2 class="shopping-list-book-title">${title}</h2>
         <p class="shopping-list-book-category">${list_name}</p>
-        <p class="shopping-list-book-description">${description || 'Description is empty'}</p>
+        <p class="shopping-list-book-description">${
+          description || 'Description is empty'
+        }</p>
         <p class="shopping-list-book-author">${author}</p>
         <div class="shopping-list-book-links">
-          <a class="test-link" href="${amazon.url}">
+          <a class="test-link" href="${
+            amazon.url
+          }" target="_blank" rel="nofollow noopener">
             <svg width="32" height="11" class="shopping-list-amazon"><use href="${iconsSL}#icon-amazon"></use></svg>
           </a>
-          <a class="test-link" href="${apple_books.url}">
+          <a class="test-link" href="${
+            apple_books.url
+          }" target="_blank" rel="nofollow noopener">
             <svg width="16" height="16" class="shopping-list-apple"><use href="${iconsSL}#icon-apple-books-logo"></use></svg>
           </a>
-          <a class="test-link" href="${bookshop.url}">
+          <a class="test-link" href="${
+            bookshop.url
+          }" target="_blank" rel="nofollow noopener">
             <svg width="16" height="16" class="shopping-list-bookshop"><use href="${iconsSL}#icon-book-shops-logo"></use></svg>
           </a>
         </div>
