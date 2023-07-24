@@ -79,7 +79,6 @@ function singUp(event) {
   const { userPassword, userEmail, userName } = event.target.elements;
   createUserWithEmailAndPassword(auth, userEmail.value, userPassword.value)
     .then(userCredential => {
-      console.log('Signed up===>>>');
       const user = userCredential.user;
       localStorage.setItem('userAuth', JSON.stringify(user.uid));
       userRef = ref(database, 'users/' + user.uid);
@@ -99,7 +98,6 @@ function singUp(event) {
     .catch(error => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      console.log(errorMessage);
       console.log(errorCode);
       Notify.failure(
         'Sorry, you entered incorrect data. Please check the entered data for errors and try again.'
@@ -114,13 +112,11 @@ function singIn(event) {
     remember: true,
   })
     .then(userCredential => {
-      console.log('Signed in===>>>');
       const user = userCredential.user;
       bookListRef = ref(database, 'usersBookList/' + user.uid);
       localStorage.setItem('userAuth', JSON.stringify(user.uid));
       onValue(bookListRef, snapshot => {
         const data = snapshot.val();
-        console.log(data);
         localStorage.setItem('bookList', data);
         document.querySelector('.user-info').classList.remove('is-hidden');
         registrationForm.reset();
@@ -156,7 +152,6 @@ function onOpenAuthMenu() {
 export function singOuttt() {
   signOut(auth)
     .then(() => {
-      console.log('Signed out===>>>');
       userRef = null;
       localStorage.removeItem('userAuth');
       localStorage.removeItem('userOption');
@@ -182,6 +177,12 @@ function setUserInfo() {
 }
 
 export function addToFierbase() {
-  const cartDataFromLocalStorage = localStorage.getItem('bookList');
-  set(bookListRef, cartDataFromLocalStorage);
+  if (isAuth) {
+    const cartDataFromLocalStorage = localStorage.getItem('bookList');
+    set(bookListRef, cartDataFromLocalStorage);
+  } else {
+    Notify.warning(
+      'If you want to save changes in your Shopping List, please log in to your account or create it'
+    );
+  }
 }

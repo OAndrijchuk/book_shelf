@@ -25,7 +25,6 @@ if (JSON.parse(localStorage.getItem('userAuth'))) {
     document.querySelector('.userName').textContent = user.userName;
   }
 
-  console.log(user);
   const signupBtn = [...document.querySelectorAll('.sign-up-btn')];
   const singOutBtn = document.querySelector('.sign-out-mobile');
   signupBtn.forEach(el => el.classList.add('visually-hidden'));
@@ -33,6 +32,5 @@ if (JSON.parse(localStorage.getItem('userAuth'))) {
   document.querySelector('.user-btn').classList.remove('visually-hidden');
 } else {
   document.querySelector('.user-info').classList.add('visually-hidden');
-  console.log('No autorizetion=====>>>>>');
 }
 // style="overflow: hidden;"

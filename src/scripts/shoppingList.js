@@ -109,7 +109,6 @@ export function onDeleteClick(event) {
   const booksInChart = JSON.parse(localStorage.getItem('bookList')) || null;
   const deletingBookId = event.target.dataset.id;
   const bookIdx = booksInChart.indexOf(deletingBookId);
-  console.log(bookIdx);
   if (bookIdx !== -1) {
     booksInChart.splice(bookIdx, 1);
     localStorage.setItem('bookList', JSON.stringify(booksInChart));
