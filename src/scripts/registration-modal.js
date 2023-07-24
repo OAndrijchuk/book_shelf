@@ -52,7 +52,7 @@ if (isAuth) {
   singOutBtn.forEach(el => el.addEventListener('click', singOuttt));
 } else {
   singUpBtn.forEach(el => el.addEventListener('click', onOpenAuthMenu));
-  onOpenAuthMenu();
+  // onOpenAuthMenu();
 }
 
 function singUpModalMarkup(event) {

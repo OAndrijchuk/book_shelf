@@ -12,7 +12,7 @@ import {
 import { FetchBook } from './api';
 import { Options } from 'smooth-scrollbar/options';
 
-const buttonBag = document.querySelector('.shopping-list-book-btn')
+const buttonBag = document.querySelector('.shopping-list-book-btn');
 const mobileLinks = document.querySelectorAll('.mob-menu-link');
 mobileLinks.forEach(el => el.classList.remove('activ-page'));
 mobileLinks[1].classList.add('activ-page');
@@ -126,5 +126,4 @@ export function onDeleteClick(event) {
 
   onShoppingClick();
   addToFierbase();
-
 }
