@@ -125,5 +125,5 @@ export function onDeleteClick(event) {
   }
 
   onShoppingClick();
-  addToFierbase();
+  // addToFierbase();
 }
