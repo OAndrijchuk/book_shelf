@@ -99,6 +99,10 @@
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+  .section-support {
+      // padding-top: 86px;
+      padding-right: 32px;
+    }
   .section-support > .container {
     min-height: 472px;
   }
