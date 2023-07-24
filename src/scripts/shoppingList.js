@@ -11,6 +11,7 @@ import {
 } from './shoping-list-markup';
 import { FetchBook } from './api';
 import { Options } from 'smooth-scrollbar/options';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const buttonBag = document.querySelector('.shopping-list-book-btn');
 const mobileLinks = document.querySelectorAll('.mob-menu-link');
@@ -113,7 +114,7 @@ export function onDeleteClick(event) {
     booksInChart.splice(bookIdx, 1);
     localStorage.setItem('bookList', JSON.stringify(booksInChart));
     allLiEl.find(el => el.dataset.id === deletingBookId).remove();
-    Notiflix.Notify.info('Book successfully deleted from your chart');
+    Notify.info('Book successfully deleted from your chart');
   }
   if (booksInChart.length === 0) {
     container.innerHTML = createEmptyBackground();
@@ -125,5 +126,5 @@ export function onDeleteClick(event) {
   }
 
   onShoppingClick();
-  // addToFierbase();
+  addToFierbase();
 }
