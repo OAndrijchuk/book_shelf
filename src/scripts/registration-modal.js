@@ -1,3 +1,4 @@
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { initializeApp } from 'firebase/app';
 import { getDatabase, ref, set, onValue } from 'firebase/database';
 import {
@@ -100,6 +101,9 @@ function singUp(event) {
       const errorMessage = error.message;
       console.log(errorMessage);
       console.log(errorCode);
+      Notify.failure(
+        'Sorry, you entered incorrect data. Please check the entered data for errors and try again.'
+      );
     });
 }
 
@@ -128,6 +132,9 @@ function singIn(event) {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log(errorMessage);
+      Notify.failure(
+        'Sorry, you entered incorrect data. Please check the entered data for errors and try again.'
+      );
     });
 }
 
