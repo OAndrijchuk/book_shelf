@@ -116,12 +116,6 @@ function createCardMarkup(listMap, searchQuery) {
   <h1 class="books-section-title" id="section-title"">${highlightedQuery}</h1>
   <ul class="card-list">${listMap}</ul>
   </div>`;
-
-  // container.scrollIntoView({
-  //   block: 'start',
-  //   inline: 'nearest',
-  //   behavior: 'smooth',
-  // });
 }
 
 //! --------------------

@@ -1,5 +1,4 @@
 const switcher = document.querySelector('.js-switcher');
-// const switcher = document.getElementsByClassName('js-switcher');
 
 switcher.checked = JSON.parse(localStorage.getItem('darck-theam'));
 changeTheam();
@@ -22,6 +21,3 @@ function changeTheam() {
       .classList.remove('black-theam-header');
   }
 }
-// =============================activ link===============================================
-
-// ==================================================================================

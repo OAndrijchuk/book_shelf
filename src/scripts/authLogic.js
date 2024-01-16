@@ -2,7 +2,7 @@ import { singOuttt } from './registration-modal';
 
 const userEl = document.querySelector('.user-btn');
 const logOutBtn = document.querySelector('.sign-out-btn');
-// const signUpBtn = document.querySelector('.sign-up-btn');
+
 
 userEl.addEventListener('click', showLogOut);
 

@@ -10,7 +10,6 @@ import {
   createShopingList,
 } from './shoping-list-markup';
 import { FetchBook } from './api';
-import { Options } from 'smooth-scrollbar/options';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const buttonBag = document.querySelector('.shopping-list-book-btn');

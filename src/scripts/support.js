@@ -59,8 +59,6 @@ const charities = [
 ];
 const charityLogosContainer = document.querySelector('.swiper-wrapper');
 const expandBtn = document.querySelector('.support-button');
-// const iconButtonAngle = document.querySelector('.icon-button-angle');
-// const supportContainer = document.querySelector('.support-container');
 function createCharityLogo(charity, index) {
   const formattedIndex = (index + 1).toString().padStart(2, '0');
   return `<li class="support-link swiper-slide">           
@@ -77,14 +75,6 @@ function displayAllCharities() {
 displayAllCharities();
 const swiper = new Swiper('.swiper-container', {
   direction: 'vertical',
-  // breakpoints: {
-  //   768: {
-  //     slidesPerView: 6,
-  //   },
-  //   0: {
-  //     slidesPerView: 4,
-  //   },
-  // },
   slidesPerView: 4,
   loop: true,
   autoplay: {

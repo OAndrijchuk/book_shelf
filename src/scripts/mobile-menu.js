@@ -1,6 +1,4 @@
-import { some } from 'lodash';
-import { getDatabase, ref, set, onValue } from 'firebase/database';
-import { setUserInfo } from './registration-modal';
+import { getDatabase } from 'firebase/database';
 
 const database = getDatabase();
 
@@ -33,4 +31,3 @@ if (JSON.parse(localStorage.getItem('userAuth'))) {
 } else {
   document.querySelector('.user-info').classList.add('visually-hidden');
 }
-// style="overflow: hidden;"

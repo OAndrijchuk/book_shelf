@@ -18,7 +18,6 @@ const firebaseConfig = {
   messagingSenderId: '342785973706',
   appId: '1:342785973706:web:ed93e4de8cbbab9e978333',
 };
-// Initialize Firebase
 initializeApp(firebaseConfig);
 const auth = getAuth();
 const database = getDatabase();
@@ -53,7 +52,6 @@ if (isAuth) {
   singOutBtn.forEach(el => el.addEventListener('click', singOuttt));
 } else {
   singUpBtn.forEach(el => el.addEventListener('click', onOpenAuthMenu));
-  // onOpenAuthMenu();
 }
 
 function singUpModalMarkup(event) {
@@ -171,7 +169,6 @@ function setUserInfo() {
       localStorage.setItem('userOption', data);
       const user = JSON.parse(data);
       window.setTimeout(() => document.location.reload(), 1000);
-      // document.location.reload();
     }
   );
 }
